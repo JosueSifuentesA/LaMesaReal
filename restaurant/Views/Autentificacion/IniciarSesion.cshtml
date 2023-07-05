@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Iniciar Sesion";
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/auth.css">
+}
+
+<section class="containerForm">
+    <img class="containerForm_img" src="~/img/IniciarSesion.jpg"/>
+    <form asp-controller="Autentificacion" asp-action="login" method="post" id="loginForm" class="containerForm_form">
+            <div class="form_InicioSesion_inputHandler">
+                <label for="username">Usuario</label>
+                <input name="username" type="text" placeholder="Lucas123"/>
+            </div>
+            <div class="form_InicioSesion_inputHandler">
+                <label for="password">Contraseña</label>
+                <input name="password" type="password" placeholder="******"/>
+            </div>
+
+            <button class="form_InicioSesion_btn" type="submit">IniciarSesion</button>
+            <span class="form_InicioSesion_span">¿No tienes una cuenta? <a asp-controller="Autentificacion" asp-action="Registrarse">Registrarse</a></span>
+    </form>
+</section>

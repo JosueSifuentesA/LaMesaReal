@@ -1,0 +1,140 @@
+.containerForm{
+    display: flex;
+    margin: 100px auto;
+    width: 70%;
+    justify-content: center;
+    box-shadow: 8px 10px 16px rgba(0,0,0,0.25);
+    border-radius: 10px;
+}
+
+.containerForm_div{
+    display: flex;
+}
+
+.containerForm_form{
+    display: flex;
+    flex-flow: column;
+    background-color: #FF8C04;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-evenly;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.containerForm_formRegistros{
+    display: flex;
+    flex-flow: column;
+    background-color: #FF8C04;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-evenly;
+    border-radius: 0px 0px 10px 0px;
+    height: 82%;
+}
+
+.form_InicioSesion_inputHandler{
+    color: white;
+    display: flex;
+    flex-flow: column;
+    font-weight: 600;
+    gap: 5px;
+}
+
+.form_InicioSesion_inputHandler input{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.containerForm_img{
+    width: 60%;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.form_InicioSesion_btn{
+    padding: 5px 10px;
+    color: black;
+    font-weight: 600;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+}
+
+.form_InicioSesion_span{
+    color: white;
+}
+
+.form_InicioSesion_span a {
+    color: white;
+    font-weight: 600;
+    margin: 0px 5px;
+}
+
+.form_inputContainer_active{
+    display: block;
+}
+
+.form_inputContainer{
+    display: none;
+}
+
+.stepContainer_step{
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+}
+
+.stepContainer_step_active{
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+}
+
+.dataContainer{
+    width: 40%;
+}
+
+.stepsContainer{
+    display: flex;
+    background-color: #FF8C04;
+    justify-content: space-evenly;
+    padding: 20px;
+    border-radius: 0px 10px 0px 0px;
+}
+
+@media(max-width:1000px){
+    .containerForm{
+        display: flex;
+        flex-flow: column;
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .containerForm_form{
+        border-radius: 0px 0px 10px 10px;
+        width: 100%;
+    }
+    .containerForm_img{
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+        max-height: 400px;
+    }
+
+    .dataContainer{
+        width: 100%;
+    }
+
+    .stepsContainer{
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    .containerForm_formRegistros{
+        border-radius: 0px 0px 10px 10px;
+    }
+
+}
