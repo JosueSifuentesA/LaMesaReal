@@ -86,3 +86,4 @@ C:\Users\josue\OneDrive\Escritorio\Programacion_Invierno\RestaurantDotnet\restau
 C:\Users\josue\OneDrive\Escritorio\Programacion_Invierno\RestaurantDotnet\restaurant\obj\Debug\net7.0\restaurant.pdb
 C:\Users\josue\OneDrive\Escritorio\Programacion_Invierno\RestaurantDotnet\restaurant\obj\Debug\net7.0\restaurant.genruntimeconfig.cache
 C:\Users\josue\OneDrive\Escritorio\Programacion_Invierno\RestaurantDotnet\restaurant\obj\Debug\net7.0\ref\restaurant.dll
+C:\Users\josue\OneDrive\Escritorio\Programacion_Invierno\RestaurantDotnet\restaurant\bin\Debug\net7.0\credenciales.json
