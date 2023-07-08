@@ -51,6 +51,37 @@ body {
   padding: 10px 0px;
 }
 
+
+.sideBarMenu{
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  border: 1px solid orange;
+  width: 20vw;
+  padding: 20px;
+  box-shadow: 3px 0px 4px 0px rgba(0,0,0,0.25);
+}
+
+.optionsHandler{
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+}
+
+.option_header{
+  display: flex;
+  gap:10px;
+  align-items: center;
+  color: #FF8C04;
+  font-weight: 700;
+}
+
+.option_header embed{
+  width: 15%;
+}
+
+
 a img {
   margin: 0px 5px;
 }

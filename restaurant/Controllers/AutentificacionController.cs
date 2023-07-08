@@ -50,7 +50,7 @@ namespace restaurant.Controllers
 
                 switch(user.rol_usuario){
                     case "ADMIN": 
-                        return RedirectToAction("Index","Admin");                  
+                        return RedirectToAction("Index","Admin",new {userId=user.id_usuario,username=username,userRol=user.rol_usuario});                  
                     case "USUARIO":
                         return RedirectToAction("Index","Usuario");                   
                     case "REPARTIDOR":

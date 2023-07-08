@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - restaurant</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/restaurant.styles.css" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <header>
+        <nav class="navBarComponent navbar navbar-expand-sm navbar-toggleable-sm navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/img/RestaurantLogo.png"/></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navBarComponent_linksHandler navbar-collapse collapse">
+                    <ul class="linksHandler_pageModules navbar-nav flex-grow-1">
+                        <li id="test" class="pageModules_authItems nav-item">
+                            Bienvenido! @ViewBag.username
+                        </li>
+                    </ul>
+                    
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main role="main" class="AdminMainContainer">
+        <section class="sideBarMenu">
+        <div class="sideBarMenu_producto">
+            <div class="option_header producto_header">
+                <embed class="svgEmbed" type="image/svg+xml" src="~/img/shoppingBag.svg"/>
+                <label>Productos</label>
+                <embed class="svgEmbed" type="image/svg+xml" src="~/img/chevronDown.svg"/>
+            </div>
+            <div class="optionsHandler">
+                <div class="optionsHandler_option optionAddProduct">
+                    <label>Añadir producto</label>
+                </div>
+
+                <div class="optionsHandler_option optionEditProduct">
+                    <label>Editar producto</label>
+                </div>
+
+                <div class="optionsHandler_option optionDeleteProduct">
+                    <label>Eliminar producto</label>
+                </div>
+
+                <div class="optionsHandler_option optionListProduct">
+                    <label>Listar productos</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="sideBarMenu_repartidores">
+            <div class="option_header repartidores_header">
+                <embed class="svgEmbed" src="~/img/sideBarDeliveryIcon.svg"/>
+                <label>Repartidores</label>
+                <embed class="svgEmbed" src="~/img/chevronDown.svg"/>
+            </div>
+
+            <div class="optionsHandler">
+                <div class="optionsHandler_option optionAddDelivery">
+                    <label>Añadir repartidor</label>
+                </div>
+                <div class="optionsHandler_option optionEditDelivery">
+                    <label>Editar repartidor</label>
+                </div>
+                <div class="optionsHandler_option optionDeleteDelivery">
+                    <label>Eliminar repartidor</label>
+                </div>
+                <div class="optionsHandler_option optionListDelivery">
+                    <label>Listar repartidores</label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sideBarMenu_Categorias">
+            <div class="option_header Categorias_header">
+                <embed class="svgEmbed" src="~/img/categoryIcon.svg"/>
+                <label>Categorias</label>
+                <embed class="svgEmbed" src="~/img/chevronDown.svg"/>
+            </div>
+            <div class="optionsHandler">
+                <div class="optionsHandler_option optionAddDelivery">
+                    <label>Añadir repartidor</label>
+                </div>
+
+                <div class="optionsHandler_option optionEditDelivery">
+                    <label>Editar repartidor</label>
+                </div>
+
+                <div class="optionsHandler_option optionDeleteDelivery">
+                    <label>Eliminar repartidor</label>
+                </div>
+
+                <div class="optionsHandler_option optionListDelivery">
+                    <label>Listar repartidores</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="sideBarMenu_pedidos">
+            <div class="option_header pedidos_header">
+                <embed class="svgEmbed" src="~/img/OrangeCartIcon.svg"/>
+                <label>Pedidos</label>
+                <embed class="svgEmbed" src="~/img/chevronDown.svg"/>
+            </div>
+            <div class="optionsHandler">
+                <div class="optionsHandler_option optionEditOrder">
+                    <label>Editar pedido</label>
+                </div>
+
+                <div class="optionsHandler_option optionDeleteOrder">
+                    <label>Eliminar pedido</label>
+                </div>
+
+                <div class="optionsHandler_option optionListOrder">
+                    <label>Listar pedidos</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="sideBarMenu_usuarios">
+            <div class="option_header usuarios_header">
+                <embed class="svgEmbed" src="~/img/userIcon.svg"/>
+                <label>Usuarios</label>
+                <embed class="svgEmbed" src="~/img/chevronDown.svg"/>
+            </div>
+            <div class="optionsHandler">
+                <div class="optionsHandler_option optionAddUser">
+                    <label>Añadir usuario</label>
+                </div>
+
+                <div class="optionsHandler_option optionEditUser">
+                    <label>Editar usuario</label>
+                </div>
+
+                <div class="optionsHandler_option optionDeleteUser">
+                    <label>Eliminar usuarios</label>
+                </div>
+
+                <div class="optionsHandler_option optionListUser">
+                    <label>Listar usuarios</label>
+                </div>
+            </div>
+        </div>
+
+        </section>
+        @RenderBody()
+    </main>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - restaurant - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+<script>
+
+    $(document).ready(()=>{
+        
+        $(".sideBarMenu").hide();
+        $("test").addEventListener("click",()=>{
+            alert("clicked")
+            $(".sideBarMenu").scroll();
+        })
+
+
+
+
+    })
+
+
+</script>
+
+
+
+</html>

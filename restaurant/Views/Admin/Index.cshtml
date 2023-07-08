@@ -2,76 +2,43 @@
 
 @{
     ViewData["Title"] = "Home Page";
+    Layout = "_LayoutAdmin";
 }
 @section Styles {
     <link rel="stylesheet" href="~/css/mainPage.css">
 }
 
-<section class="InformationSection">
-    <div class="InformationSection_ImageContainer">
-        <img class="ImageContainer_img" src="~/img/HeroImgMainPage.jpg">
-    </div>
-    <div class="InformationSection_informationModules">
-        <div class="informationModules_module">
-            <img src="~/img/BellIcon.svg">
-            <span>SERVICIO RAPIDO</span>
+<section class="AdminMainContainer_dashboard">
+    <section class="dashboard_infoHandler">
+        <div class="info_Handler_ordersPending">
+            <label>Ordenes pendientes</label>
+            <label>5</label>
         </div>
-        <div class="informationModules_module">
-            <img src="~/img/DeliveryIcon.svg">
-            <span>30 MINUTOS O ES GRATIS</span>
+        <div class="info_Handler_ordersShiped">
+            <label>Ordenes enviadas</label>
+            <label>50</label>
         </div>
-        <div class="informationModules_module">
-            <img src="~/img/RecipeIcon.svg">
-            <span>RECETAS ORIGINALES</span>
+        <div class="info_Handler_ordersTotalPrice">
+            <label>Ganancia total de las ordenes</label>
+            <label>S/50 000</label>
         </div>
-    </div>
-</section>
+    </section>
 
-
-<section class="ProductSection">
-
-    <div class="ProductSectionHeader">
-        <div class="CategoryHandler">
-            <div class="CategoryHandler_categoryItem-active">
-                <label>ALL</label>
-            </div>
-            <div class="CategoryHandler_categoryItem">
-                <label>PASTA</label>
-            </div>
-            <div class="CategoryHandler_categoryItem">
-                <label>CARNE</label>
-            </div>
-            <div class="CategoryHandler_categoryItem">
-                <label>MARISCOS</label>
-            </div>
-            <div class="CategoryHandler_categoryItem">
-                <label>VERDURAS</label>
-            </div>
-            <div class="CategoryHandler_categoryItem">
-                <label>CERDO</label>
-            </div>
-        </div>
-        <form class="ProductSectionHeader_form">
-            <input class="CategoryHandler_input" type="text" placeholder="ej. Costillas de Cerdo">
-            <button class="form_btn" type="submit"/><img src="~/img/searchIcon.svg"/></button>
-        </form>
-
-    </div>
-
-    <section class="productCardHandler">
-        @foreach (var productos in Model)
-        {
-            <div class="productCard">
-                <img src="https://drive.google.com/uc?export=view&id=@productos.url_image" alt="@productos.nombre_producto"/>
-                <div class="productCard_price">
-                    <label class="price_text">S/@productos.precio_producto</label>
-                </div>
-                <div class="productCard_information">
-                    <label>@productos.nombre_producto</label>
-                    <a class="productCard_buyButton"><img src="~/img/BuyButton.svg"/></a>
-                </div>
-            </div>
-        }
+    <section class="dashboard_logs">
+        <table>
+            <thead>
+                <th>Log Id</th>
+                <th>Log Message</th>
+                <th>Log Date</th>
+            </thead>
+            <tbody>
+                <td>1</td>
+                <td>Administrador Josue123 añadio un nuevo producto</td>
+                <td>07/07/2023</td>
+            </tbody>
+        </table>
     </section>
 
 </section>
+
+

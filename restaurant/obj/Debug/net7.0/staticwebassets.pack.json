@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\img\\OfertasIcon.svg"
     },
     {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\OrangeCartIcon.svg",
+      "PackagePath": "staticwebassets\\img\\OrangeCartIcon.svg"
+    },
+    {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\RecipeIcon.svg",
       "PackagePath": "staticwebassets\\img\\RecipeIcon.svg"
     },
@@ -57,8 +61,28 @@
       "PackagePath": "staticwebassets\\img\\RestaurantLogo.png"
     },
     {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\categoryIcon.svg",
+      "PackagePath": "staticwebassets\\img\\categoryIcon.svg"
+    },
+    {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\chevronDown.svg",
+      "PackagePath": "staticwebassets\\img\\chevronDown.svg"
+    },
+    {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\searchIcon.svg",
       "PackagePath": "staticwebassets\\img\\searchIcon.svg"
+    },
+    {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\shoppingBag.svg",
+      "PackagePath": "staticwebassets\\img\\shoppingBag.svg"
+    },
+    {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\sideBarDeliveryIcon.svg",
+      "PackagePath": "staticwebassets\\img\\sideBarDeliveryIcon.svg"
+    },
+    {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\userIcon.svg",
+      "PackagePath": "staticwebassets\\img\\userIcon.svg"
     },
     {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\js\\site.js",
