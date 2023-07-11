@@ -48,8 +48,6 @@ namespace restaurant.Controllers
                 {
                     await fileImage.imgSubida.CopyToAsync(ms);
                     var imgSubidaByte = ms.ToArray();
-                    Console.WriteLine(nombrePlatillo + " " + precioPlatillo + " " + imgSubidaByte + " " + categoriaId + " " + descripcionPlatillo);
-
                     await _productoService.CrearProducto(nombrePlatillo,precioPlatillo,descripcionPlatillo,"FakeUrl",categoriaId,imgSubidaByte);
                 }
                 else

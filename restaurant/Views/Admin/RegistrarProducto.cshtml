@@ -10,42 +10,56 @@
 }
 
 
-<section>
+<section class="sectionAñadirProductos">
     <h1>Añadir Platillo</h1>
     <form asp-controller="Admin" asp-action="RegistrarProductoPost" method="post" enctype="multipart/form-data" class="formPlatillo">
-        <div class="formPlatillo_inputHandler">
-            <label>Nombre del Platillo</label>
-            <input name="nombrePlatillo" type="text" placeholder="Fideos con Albondigas" required />
+        
+        <div class="form_Platillo_infoContainer">
+            <div class="formPlatillo_inputHandler">
+                <label>Nombre del Platillo</label>
+                <input name="nombrePlatillo" type="text" placeholder="Fideos con Albondigas" required />
+            </div>
+
+            <div class="formPlatillo_inputHandler">
+                <label>Precio del Platillo</label>
+                <input name="precioPlatillo" type="number" step="0.01" placeholder="S/69.00" required />
+            </div>
+
+
+            <div class="formPlatillo_inputHandler">
+                <label>Categoria del Platillo</label>
+                <select name="categoriaId" required>
+                    @foreach (var item in Model)
+                    {
+                        <option value="@item.id_categoria">@item.nombre_categoria</option>
+                    }
+                </select>
+            </div>
+
+            <div class="formPlatillo_inputHandler" style="display:flex;flex-flow:column;gap:10px">
+                <label>Descripcion del Platillo</label>
+                <textarea name="descripcionPlatillo" rows="5" cols="20" placeholder="Fideos con Albondigas" required></textarea>
+            </div>
+        </div>
+        <div class="form_Platillo_infoContainer">
+            <div class="formPlatillo_inputHandler">
+                <label>Imagen del Platillo</label>
+                <div class="dropzoneContainer">
+                    <input id="fileInput" name="imgSubida" type="file" required />
+                    <img id="fileImg"/>
+                    <div id="fileMessageContainer" class="dropzoneContainer_message">
+                        <h1>Arrastra una imagen para añadirla </h1>
+                        <h2>&#8595</h2>
+                    </div>
+                </div>
+            </div>
+
+            <button class="formPlatillo_btn" type="submit">Registrar Platillo</button>
         </div>
 
-        <div class="formPlatillo_inputHandler">
-            <label>Precio del Platillo</label>
-            <input name="precioPlatillo" type="number" step="0.01" placeholder="S/69.00" required />
-        </div>
-
-        <div class="formPlatillo_inputHandler">
-            <label>Imagen del Platillo</label>
-            <input name="imgSubida" type="file" required />
-        </div>
-
-        <div class="formPlatillo_inputHandler">
-            <label>Categoria del Platillo</label>
-            <select name="categoriaId" required>
-                @foreach (var item in Model)
-                {
-                    <option value="@item.id_categoria">@item.nombre_categoria</option>
-                }
-            </select>
-        </div>
-
-        <div class="formPlatillo_inputHandler" style="display:flex;flex-flow:column;gap:10px">
-            <label>Descripcion del Platillo</label>
-            <textarea name="descripcionPlatillo" rows="5" cols="20" placeholder="Fideos con Albondigas" required></textarea>
-        </div>
-
-        <button type="submit">Registrar Platillo</button>
     </form>
-
-
-
 </section>
+
+@section Scripts{
+    <script src="~/js/registrarProducto.js"></script>
+}
