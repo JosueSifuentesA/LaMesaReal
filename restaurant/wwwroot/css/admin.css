@@ -1,0 +1,133 @@
+.info_Handler{
+    display: flex;
+    flex-flow: column;
+    margin: 20px auto;
+    justify-items: center;
+    justify-content: center;
+}
+
+.dashboard_infoHandler{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.AdminMainContainer_dashboard{
+    width: 100%;
+}
+
+.AdminMainContainer{
+    display: flex;
+}
+
+.dashboard_logs{
+    width: 100%;
+}
+
+.info_HandlerModules{
+    display: flex;
+    /* border: 1px solid red; */
+    min-width: 250px;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff8c04b3;
+    border-radius: 10px;
+    box-shadow: 4px 5px 4px rgba(0,0,0,0.25);
+  }
+  
+.info_HandlerModules img{
+    width: 20vw;
+    min-width: 100px;
+    max-width: 120px;
+}
+
+.info_Handler{
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.handler_data{
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.scale-up-vertical-center{
+    animation:scale-up-vertical-center 0.7s
+} 
+
+@keyframes scale-up-vertical-center{
+
+    0%{
+        transform:scaleY(.2)
+    }
+
+    100%{
+        transform:scaleY(1)
+    }
+
+}
+
+
+.scale-up-bottom{
+    animation:scale-up-bottom 0.6s; 
+}
+
+@keyframes scale-up-bottom{
+
+    0%{transform:scale(.5);
+        transform-origin:center bottom
+    }
+
+    100%{
+        transform:scale(1);
+        transform-origin:center bottom
+    }
+}
+
+.optionsHandler_option{
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.optionsHandler_option a{
+    user-select: none;
+}
+
+.optionsHandler_option:hover {
+    background-color: orange;
+    color: white;
+    box-shadow: 3px 2px 6px rgba(0,0,0,0.25) ;
+}
+
+
+
+table{
+    margin: 10px auto;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 80%;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+}
+
+thead{
+    background-color: rgb(255, 206, 116);
+    text-align: center;
+}
+
+tr{
+    border-bottom: 1px solid orange;
+    /*padding: 5px;*/
+    text-align: center;
+}
+
+td{
+    padding: 10px;
+}

@@ -68,6 +68,12 @@
 @section Scripts{
 
     <script>
+
+        const form = document.getElementById("registerForm");
+        const formData = new FormData(form);
+
+        console.log(formData.getAll("telefono"));
+
         const btn = document.getElementById("btn");
         const inputsPage = document.querySelectorAll("#inputContainer");
         const steps = document.querySelectorAll("#step");

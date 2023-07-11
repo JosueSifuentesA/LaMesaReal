@@ -15,6 +15,8 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddScoped<UsuarioServiceImplement>();
 builder.Services.AddScoped<PersonaServiceImplement>();
 builder.Services.AddScoped<ProductoServiceImplement>();
+builder.Services.AddScoped<CategoriaServiceImplement>();
+
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();

@@ -61,8 +61,8 @@
     <section class="productCardHandler">
         @foreach (var productos in Model)
         {
-            <div class="productCard">
-                <img src="https://drive.google.com/uc?export=view&id=@productos.url_image" alt="@productos.nombre_producto"/>
+            <div class="productCard scale-up-center">
+                <img src="data:image/jpeg;base64,@Convert.ToBase64String(@productos.imgSubidaByte)"/>
                 <div class="productCard_price">
                     <label class="price_text">S/@productos.precio_producto</label>
                 </div>

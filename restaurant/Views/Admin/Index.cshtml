@@ -5,36 +5,54 @@
     Layout = "_LayoutAdmin";
 }
 @section Styles {
-    <link rel="stylesheet" href="~/css/mainPage.css">
+    <link rel="stylesheet" href="~/css/admin.css">
 }
 
 <section class="AdminMainContainer_dashboard">
     <section class="dashboard_infoHandler">
-        <div class="info_Handler_ordersPending">
-            <label>Ordenes pendientes</label>
-            <label>5</label>
+        <div class="info_HandlerModules info_HandlerModules_ordersPending scale-up-vertical-center">
+            <img src="~/img/notebook.svg"/>
+            <div class="info_Handler info_Handler_ordersPending">
+                <label>Ordenes pendientes</label>
+                <label class="handler_data">5</label>
+            </div>
         </div>
-        <div class="info_Handler_ordersShiped">
-            <label>Ordenes enviadas</label>
-            <label>50</label>
+        <div class="info_HandlerModules info_HandlerModules_ordersShiped scale-up-vertical-center">
+            <img src="~/img/task.svg"/>
+            <div class="info_Handler info_Handler_ordersShiped">
+                <label>Ordenes enviadas</label>
+                <label class="handler_data">50</label>
+            </div>
         </div>
-        <div class="info_Handler_ordersTotalPrice">
-            <label>Ganancia total de las ordenes</label>
-            <label>S/50 000</label>
+        <div class="info_HandlerModules info_HandlerModules_ordersTotalPrice scale-up-vertical-center" >
+            <img src="~/img/cryptocurrency.svg"/>
+            <div class="info_Handler info_Handler_ordersTotalPrice">
+                <label>Ganancia total de las ordenes</label>
+                <label class="handler_data">S/50 000</label>
+            </div>
         </div>
     </section>
 
     <section class="dashboard_logs">
-        <table>
+        <table class="scale-up-bottom">
             <thead>
                 <th>Log Id</th>
                 <th>Log Message</th>
                 <th>Log Date</th>
             </thead>
             <tbody>
-                <td>1</td>
-                <td>Administrador Josue123 añadio un nuevo producto</td>
-                <td>07/07/2023</td>
+                <tr>
+                    <td>1</td>
+                    <td>Administrador Josue123 añadio un nuevo producto</td>
+                    <td>07/07/2023</td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Administrador Josue123 añadio un nuevo producto</td>
+                    <td>07/07/2023</td>
+                </tr>
+
             </tbody>
         </table>
     </section>

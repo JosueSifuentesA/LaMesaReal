@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\restaurant.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\css\\auth.css",
       "PackagePath": "staticwebassets\\css\\auth.css"
     },
@@ -69,6 +73,14 @@
       "PackagePath": "staticwebassets\\img\\chevronDown.svg"
     },
     {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\cryptocurrency.svg",
+      "PackagePath": "staticwebassets\\img\\cryptocurrency.svg"
+    },
+    {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\notebook.svg",
+      "PackagePath": "staticwebassets\\img\\notebook.svg"
+    },
+    {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\searchIcon.svg",
       "PackagePath": "staticwebassets\\img\\searchIcon.svg"
     },
@@ -79,6 +91,10 @@
     {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\sideBarDeliveryIcon.svg",
       "PackagePath": "staticwebassets\\img\\sideBarDeliveryIcon.svg"
+    },
+    {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\task.svg",
+      "PackagePath": "staticwebassets\\img\\task.svg"
     },
     {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\userIcon.svg",

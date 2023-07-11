@@ -32,7 +32,7 @@ namespace restaurant.Models
         public int categoriaProductoId { get; set; }
         public CategoriaProducto categoriaProducto { get; set; }
 
-
+        public byte[]? imgSubidaByte {set;get;}
 
     }
 }

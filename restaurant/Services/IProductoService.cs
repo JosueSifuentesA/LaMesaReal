@@ -11,7 +11,7 @@ namespace restaurant.Services
     {
         public IEnumerable<Producto> BuscarProductos();
 
-        public Task CrearProducto(string nombre_producto,double precio_producto,string descripcion_producto,string url_image,int categoriaProducto);
+        public Task CrearProducto(string nombre_producto,double precio_producto,string descripcion_producto,string url_image,int categoriaProducto,byte[] imgSubidaByte);
 
         public  Task EliminarProducto(int id);
 

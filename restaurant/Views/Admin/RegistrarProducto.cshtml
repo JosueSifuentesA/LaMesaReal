@@ -1,0 +1,51 @@
+@model IEnumerable<restaurant.Models.CategoriaProducto>;
+
+@{
+    ViewData["Title"] = "Registrar Producto";
+    Layout = "_LayoutAdmin";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/admin.css">
+}
+
+
+<section>
+    <h1>Añadir Platillo</h1>
+    <form asp-controller="Admin" asp-action="RegistrarProductoPost" method="post" enctype="multipart/form-data" class="formPlatillo">
+        <div class="formPlatillo_inputHandler">
+            <label>Nombre del Platillo</label>
+            <input name="nombrePlatillo" type="text" placeholder="Fideos con Albondigas" required />
+        </div>
+
+        <div class="formPlatillo_inputHandler">
+            <label>Precio del Platillo</label>
+            <input name="precioPlatillo" type="number" step="0.01" placeholder="S/69.00" required />
+        </div>
+
+        <div class="formPlatillo_inputHandler">
+            <label>Imagen del Platillo</label>
+            <input name="imgSubida" type="file" required />
+        </div>
+
+        <div class="formPlatillo_inputHandler">
+            <label>Categoria del Platillo</label>
+            <select name="categoriaId" required>
+                @foreach (var item in Model)
+                {
+                    <option value="@item.id_categoria">@item.nombre_categoria</option>
+                }
+            </select>
+        </div>
+
+        <div class="formPlatillo_inputHandler" style="display:flex;flex-flow:column;gap:10px">
+            <label>Descripcion del Platillo</label>
+            <textarea name="descripcionPlatillo" rows="5" cols="20" placeholder="Fideos con Albondigas" required></textarea>
+        </div>
+
+        <button type="submit">Registrar Platillo</button>
+    </form>
+
+
+
+</section>

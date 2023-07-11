@@ -24,9 +24,16 @@ namespace restaurant.Services
             return productos;
         }
 
-        public async Task CrearProducto(string nombre_producto, double precio_producto, string descripcion_producto, string url_image, int categoriaProductoId)
+        public async Task CrearProducto(string nombre_producto, double precio_producto, string descripcion_producto, string url_image, int categoriaProductoId,byte[] imgSubidaByte)
         {
-            var producto = new Producto {nombre_producto = nombre_producto , precio_producto = precio_producto, descripcion_producto = descripcion_producto,url_image = url_image,categoriaProductoId = categoriaProductoId };
+            var producto = new Producto {
+                nombre_producto = nombre_producto,
+                precio_producto = precio_producto,
+                descripcion_producto = descripcion_producto,
+                url_image = url_image,
+                categoriaProductoId = categoriaProductoId,
+                imgSubidaByte=imgSubidaByte
+            };
 
             await _context.DataProducto.AddAsync(producto);
             await _context.SaveChangesAsync();
@@ -50,5 +57,6 @@ namespace restaurant.Services
         {
             throw new NotImplementedException();
         }
+
     }
 }

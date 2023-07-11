@@ -34,123 +34,125 @@
 
 
     <main role="main" class="AdminMainContainer">
-        <section class="sideBarMenu">
-        <div class="sideBarMenu_producto">
-            <div class="option_header producto_header">
-                <embed class="svgEmbed" type="image/svg+xml" src="~/img/shoppingBag.svg"/>
-                <label>Productos</label>
-                <embed class="svgEmbed" type="image/svg+xml" src="~/img/chevronDown.svg"/>
-            </div>
-            <div class="optionsHandler">
-                <div class="optionsHandler_option optionAddProduct">
-                    <label>Añadir producto</label>
+        <section id="sideBarMenu" class="sideBarMenu hidden">
+        <div class="sideBarMenu_content">
+            <div class="sideBarMenu_producto">
+                <div class="option_header producto_header">
+                    <img class="svgEmbed" type="image/svg+xml" src="~/img/shoppingBag.svg"/>
+                    <label>Productos</label>
+                    <img class="svgEmbed" type="image/svg+xml" src="~/img/chevronDown.svg"/>
                 </div>
+                <div class="optionsHandler">
+                    <div class="optionsHandler_option optionAddProduct">
+                        <a asp-controller="Admin" asp-action="RegistrarProducto">Añadir producto</a>
+                    </div>
 
-                <div class="optionsHandler_option optionEditProduct">
-                    <label>Editar producto</label>
-                </div>
+                    <div class="optionsHandler_option optionEditProduct">
+                        <a>Editar producto</a>
+                    </div>
 
-                <div class="optionsHandler_option optionDeleteProduct">
-                    <label>Eliminar producto</label>
-                </div>
+                    <div class="optionsHandler_option optionDeleteProduct">
+                        <a>Eliminar producto</a>
+                    </div>
 
-                <div class="optionsHandler_option optionListProduct">
-                    <label>Listar productos</label>
-                </div>
-            </div>
-        </div>
-
-        <div class="sideBarMenu_repartidores">
-            <div class="option_header repartidores_header">
-                <embed class="svgEmbed" src="~/img/sideBarDeliveryIcon.svg"/>
-                <label>Repartidores</label>
-                <embed class="svgEmbed" src="~/img/chevronDown.svg"/>
-            </div>
-
-            <div class="optionsHandler">
-                <div class="optionsHandler_option optionAddDelivery">
-                    <label>Añadir repartidor</label>
-                </div>
-                <div class="optionsHandler_option optionEditDelivery">
-                    <label>Editar repartidor</label>
-                </div>
-                <div class="optionsHandler_option optionDeleteDelivery">
-                    <label>Eliminar repartidor</label>
-                </div>
-                <div class="optionsHandler_option optionListDelivery">
-                    <label>Listar repartidores</label>
+                    <div class="optionsHandler_option optionListProduct">
+                        <a>Listar productos</a>
+                    </div>
                 </div>
             </div>
 
-        </div>
+            <div class="sideBarMenu_repartidores">
+                <div class="option_header repartidores_header">
+                    <img class="svgEmbed" src="~/img/sideBarDeliveryIcon.svg"/>
+                    <label>Repartidores</label>
+                    <img class="svgEmbed" src="~/img/chevronDown.svg"/>
+                </div>
 
-        <div class="sideBarMenu_Categorias">
-            <div class="option_header Categorias_header">
-                <embed class="svgEmbed" src="~/img/categoryIcon.svg"/>
-                <label>Categorias</label>
-                <embed class="svgEmbed" src="~/img/chevronDown.svg"/>
+                <div class="optionsHandler">
+                    <div class="optionsHandler_option optionAddDelivery">
+                        <a>Añadir repartidor</a>
+                    </div>
+                    <div class="optionsHandler_option optionEditDelivery">
+                        <a>Editar repartidor</a>
+                    </div>
+                    <div class="optionsHandler_option optionDeleteDelivery">
+                        <a>Eliminar repartidor</a>
+                    </div>
+                    <div class="optionsHandler_option optionListDelivery">
+                        <a>Listar repartidores</a>
+                    </div>
+                </div>
+
             </div>
-            <div class="optionsHandler">
-                <div class="optionsHandler_option optionAddDelivery">
-                    <label>Añadir repartidor</label>
-                </div>
 
-                <div class="optionsHandler_option optionEditDelivery">
-                    <label>Editar repartidor</label>
+            <div class="sideBarMenu_Categorias">
+                <div class="option_header Categorias_header">
+                    <img class="svgEmbed" src="~/img/categoryIcon.svg"/>
+                    <label>Categorias</label>
+                    <img class="svgEmbed" src="~/img/chevronDown.svg"/>
                 </div>
+                <div class="optionsHandler">
+                    <div class="optionsHandler_option optionAddDelivery">
+                        <a>Añadir categoria</a>
+                    </div>
 
-                <div class="optionsHandler_option optionDeleteDelivery">
-                    <label>Eliminar repartidor</label>
-                </div>
+                    <div class="optionsHandler_option optionEditDelivery">
+                        <a>Editar categoria</a>
+                    </div>
 
-                <div class="optionsHandler_option optionListDelivery">
-                    <label>Listar repartidores</label>
-                </div>
-            </div>
-        </div>
+                    <div class="optionsHandler_option optionDeleteDelivery">
+                        <a>Eliminar categoria</a>
+                    </div>
 
-        <div class="sideBarMenu_pedidos">
-            <div class="option_header pedidos_header">
-                <embed class="svgEmbed" src="~/img/OrangeCartIcon.svg"/>
-                <label>Pedidos</label>
-                <embed class="svgEmbed" src="~/img/chevronDown.svg"/>
-            </div>
-            <div class="optionsHandler">
-                <div class="optionsHandler_option optionEditOrder">
-                    <label>Editar pedido</label>
-                </div>
-
-                <div class="optionsHandler_option optionDeleteOrder">
-                    <label>Eliminar pedido</label>
-                </div>
-
-                <div class="optionsHandler_option optionListOrder">
-                    <label>Listar pedidos</label>
+                    <div class="optionsHandler_option optionListDelivery">
+                        <a>Listar categoria</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="sideBarMenu_usuarios">
-            <div class="option_header usuarios_header">
-                <embed class="svgEmbed" src="~/img/userIcon.svg"/>
-                <label>Usuarios</label>
-                <embed class="svgEmbed" src="~/img/chevronDown.svg"/>
+            <div class="sideBarMenu_pedidos">
+                <div class="option_header pedidos_header">
+                    <img class="svgEmbed" src="~/img/OrangeCartIcon.svg"/>
+                    <label>Pedidos</label>
+                    <img class="svgEmbed" src="~/img/chevronDown.svg"/>
+                </div>
+                <div class="optionsHandler">
+                    <div class="optionsHandler_option optionEditOrder">
+                        <a>Editar pedido</a>
+                    </div>
+
+                    <div class="optionsHandler_option optionDeleteOrder">
+                        <a>Eliminar pedido</a>
+                    </div>
+
+                    <div class="optionsHandler_option optionListOrder">
+                        <a>Listar pedidos</a>
+                    </div>
+                </div>
             </div>
-            <div class="optionsHandler">
-                <div class="optionsHandler_option optionAddUser">
-                    <label>Añadir usuario</label>
-                </div>
 
-                <div class="optionsHandler_option optionEditUser">
-                    <label>Editar usuario</label>
+            <div class="sideBarMenu_usuarios">
+                <div class="option_header usuarios_header">
+                    <img class="svgEmbed" src="~/img/userIcon.svg"/>
+                    <a>Usuarios</a>
+                    <img class="svgEmbed" src="~/img/chevronDown.svg"/>
                 </div>
+                <div class="optionsHandler">
+                    <div class="optionsHandler_option optionAddUser">
+                        <a>Añadir usuario</a>
+                    </div>
 
-                <div class="optionsHandler_option optionDeleteUser">
-                    <label>Eliminar usuarios</label>
-                </div>
+                    <div class="optionsHandler_option optionEditUser">
+                        <a>Editar usuario</a>
+                    </div>
 
-                <div class="optionsHandler_option optionListUser">
-                    <label>Listar usuarios</label>
+                    <div class="optionsHandler_option optionDeleteUser">
+                        <a>Eliminar usuarios</a>
+                    </div>
+
+                    <div class="optionsHandler_option optionListUser">
+                        <a>Listar usuarios</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -175,15 +177,19 @@
 
     $(document).ready(()=>{
         
-        $(".sideBarMenu").hide();
-        $("test").addEventListener("click",()=>{
-            alert("clicked")
-            $(".sideBarMenu").scroll();
-        })
+        //$(".sideBarMenu").hide();
+        $("#test").on("click",()=>{
+            $(".sideBarMenu").slideToggle(()=>{
+                $(".sideBarMenu").css("display:flex")
+            });
+            $(".sideBarMenu").removeClass("hidden")
+        });
+            const optionHeader = $(".option_header");
+            $(optionHeader).siblings().hide();
 
-
-
-
+            $(optionHeader).on("click",()=>{
+                $(event.currentTarget).siblings().slideToggle();
+            })
     })
 
 
