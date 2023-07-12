@@ -3,7 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - restaurant</title>
+     @if(User.Identity.IsAuthenticated){
+        <title>@ViewData["Title"] - Autenticado</title>
+    }else{
+        <title>@ViewData["Title"] - No Autenticado</title>
+    }
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/restaurant.styles.css" asp-append-version="true" />
@@ -20,9 +24,19 @@
                 </button>
                 <div class="navBarComponent_linksHandler navbar-collapse collapse">
                     <ul class="linksHandler_pageModules navbar-nav flex-grow-1">
-                        <li id="test" class="pageModules_authItems nav-item">
-                            Bienvenido! @ViewBag.username
-                        </li>
+
+                        @if(!User.Identity.IsAuthenticated){
+                            <li class="pageModules_authItems nav-item">
+                                <a asp-controller="Autentificacion" asp-action="IniciarSesion">Iniciar Sesion</a>
+                            </li>
+                            <li class="pageModules_authItems nav-item">
+                                <a asp-controller="Autentificacion" asp-action="Registrarse">Registrarse</a>
+                            </li>
+                        }else{
+                            <li id="test" class="pageModules_authItems nav-item">
+                                <a asp-controller="Autentificacion" asp-action="logout">Bienvenido @User.Identity.Name!</a>
+                            </li>
+                        }
                     </ul>
                     
 

@@ -5,9 +5,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using restaurant.Data;
 using restaurant.Models;
 using restaurant.Services;
+
 namespace restaurant.Controllers
 {
     [Route("[controller]")]
@@ -41,13 +45,26 @@ namespace restaurant.Controllers
 
         
         [HttpPost]
-        public IActionResult login(string username, string password)
+        public async Task<IActionResult> login(string username, string password)
         {   
             var user = _usuarioService.ObtenerUsuario(username,password);
             
             if(user != null){
                 Console.WriteLine("Se encontro un usuario");
 
+                //
+
+                var claims = new List<Claim>{
+                    new Claim(ClaimTypes.Name, username),
+                    new Claim(ClaimTypes.Role,  user.rol_usuario)
+                };
+                var claimsIdentity = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,new ClaimsPrincipal(claimsIdentity));
+                Console.WriteLine(claims[1].ToString());
+
+                String rolUser = User.FindFirstValue(ClaimTypes.Role);
+
+                Console.WriteLine(rolUser);
                 switch(user.rol_usuario){
                     case "ADMIN": 
                         return RedirectToAction("Index","Admin",new {userId=user.id_usuario,username=username,userRol=user.rol_usuario});                  
@@ -60,8 +77,18 @@ namespace restaurant.Controllers
                 }
             }
             
+            
+
             return View("IniciarSesion");
         }
+
+        [Route("/Logout")]
+        public async Task<IActionResult> logout(){
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index","Home");
+        }
+
+
         [HttpPost("register")]
         public async Task<IActionResult> register(string username, string password,string confirmPassword,string Nombre,string apPaterno,string apMaterno,string telefono,char sexo)
         {   
@@ -87,15 +114,11 @@ namespace restaurant.Controllers
 
                     return RedirectToAction("Error","Home");
                 }
-
-
-
-
             }
 
         }
 
-
+        [Route("/Error")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

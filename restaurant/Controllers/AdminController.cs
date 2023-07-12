@@ -6,6 +6,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Security.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 using restaurant.Models;
 using restaurant.Services;
@@ -13,6 +16,7 @@ using restaurant.Services;
 
 namespace restaurant.Controllers
 {
+    [Authorize(Roles="ADMIN")]
     [Route("[controller]")]
     public class AdminController : Controller
     {
@@ -59,7 +63,9 @@ namespace restaurant.Controllers
             return View("Index");
         }
 
+        //[Authorize(Roles="ADMIN")]
         [HttpGet]
+        [Route("/RegistrarProducto")]
         public IActionResult RegistrarProducto(){
             
             var categorias = _categoriaService.ListarCategorias();

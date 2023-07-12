@@ -1,9 +1,17 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Authorization
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - restaurant</title>
+    @if(User.Identity.IsAuthenticated){
+        <title>@ViewData["Title"] - Autenticado</title>
+    }else{
+        <title>@ViewData["Title"] - No Autenticado</title>
+    }
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/restaurant.styles.css" asp-append-version="true" />
@@ -24,14 +32,21 @@
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/img/CartIcon.svg"/>Carrito</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy"><img src="~/img/OfertasIcon.svg"/>Ofertas</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="RegistrarProducto"><img src="~/img/OfertasIcon.svg"/>Ofertas</a>
                         </li>
-                        <li class="pageModules_authItems nav-item">
-                            <a a asp-controller="Autentificacion" asp-action="IniciarSesion">Iniciar Sesion</a>
-                        </li>
-                        <li class="pageModules_authItems nav-item">
-                            <a asp-controller="Autentificacion" asp-action="Registrarse">Registrarse</a>
-                        </li>
+                        @if(!User.Identity.IsAuthenticated){
+                            <li class="pageModules_authItems nav-item">
+                                <a asp-controller="Autentificacion" asp-action="IniciarSesion">Iniciar Sesion</a>
+                            </li>
+                            <li class="pageModules_authItems nav-item">
+                                <a asp-controller="Autentificacion" asp-action="Registrarse">Registrarse</a>
+                            </li>
+                        }else{
+                            <li>
+                                <a asp-controller="Autentificacion" asp-action="logout">Cerrar Sesion</a>
+                            </li>
+                        }
+
                     </ul>
                     
 
@@ -45,9 +60,16 @@
 
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - restaurant - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        @if(User.IsInRole("ADMIN")){
+            <div class="container">
+            &copy; ADMIN- restaurant - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
+        }else{
+            <div class="container">
+            &copy; 2024 - restaurant - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+        }
+
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
