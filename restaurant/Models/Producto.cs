@@ -15,15 +15,18 @@ namespace restaurant.Models
         public int id_producto {get;set;}
         
         [Required]
+        [StringLength(50,MinimumLength =3)]
         [Column("nombre_producto")]
         public string nombre_producto {get;set;}
 
         [Required]
+        [Range(1,500)]
         [Column("precio_producto")]
         public double precio_producto {get;set;}
 
         [Required]
         [Column("descripcion_producto")]
+        [StringLength(200,MinimumLength = 10)]
         public string descripcion_producto {get;set;}
 
         [Column("imagen_producto")]

@@ -13,7 +13,8 @@
           "Microsoft.AspNetCore.Identity.UI": "7.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.3",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.4"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.4",
+          "Validation": "2.5.51"
         },
         "runtime": {
           "restaurant.dll": {}
@@ -742,6 +743,14 @@
             "fileVersion": "5.0.20.51904"
           }
         }
+      },
+      "Validation/2.5.51": {
+        "runtime": {
+          "lib/netstandard2.0/Validation.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.51.3930"
+          }
+        }
       }
     }
   },
@@ -1296,6 +1305,13 @@
       "sha512": "sha512-c1ho9WU9ZxMZawML+ssPKZfdnrg/OjR3pe0m9v8230z3acqphwvPJqzAkH54xRYm5ntZHGG1EPP3sux9H3qSPg==",
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
+    },
+    "Validation/2.5.51": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g/Aug7PVWaenlJ0QUyt/mEetngkQNsMCuNeRVXbcJED1nZS7JcK+GTU4kz3jcQ7bFuKfi8PF4ExXH7XSFNuSLQ==",
+      "path": "validation/2.5.51",
+      "hashPath": "validation.2.5.51.nupkg.sha512"
     }
   }
 }

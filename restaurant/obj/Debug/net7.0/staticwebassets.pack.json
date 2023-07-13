@@ -101,6 +101,10 @@
       "PackagePath": "staticwebassets\\img\\userIcon.svg"
     },
     {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\js\\landinPageScript.js",
+      "PackagePath": "staticwebassets\\js\\landinPageScript.js"
+    },
+    {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\js\\registrarProducto.js",
       "PackagePath": "staticwebassets\\js\\registrarProducto.js"
     },

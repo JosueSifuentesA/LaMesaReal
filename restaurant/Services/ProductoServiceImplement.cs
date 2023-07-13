@@ -18,10 +18,26 @@ namespace restaurant.Services
             _context = context;
         }
 
-        public IEnumerable<Producto> BuscarProductos()
+        public async Task<List<Producto>> BuscarProductos()
         {
-            var productos = from p in _context.DataProducto select p;
+            var productos = await _context.DataProducto.ToListAsync();
+            //var productos = from p in _context.DataProducto select p;
             return productos;
+        }
+    
+        public async Task<List<Producto>> BuscarProductos(int categoria){
+            var productos =  await _context.DataProducto.Where(prod => prod.categoriaProductoId == categoria).ToListAsync();
+            return productos;
+        }
+
+        public async Task<List<Producto>> BuscarProductos(string nombre){
+            var producto = await _context.DataProducto.Where(prod=>prod.nombre_producto==nombre).ToListAsync();
+            return  producto;
+        }
+
+        public async Task<List<Producto>> BuscarProductos(string nombre,int categoria){
+            var producto =  await _context.DataProducto.Where(prod=>prod.nombre_producto==nombre && prod.categoriaProductoId==categoria).ToListAsync();
+            return producto;
         }
 
         public async Task CrearProducto(string nombre_producto, double precio_producto, string descripcion_producto, string url_image, int categoriaProductoId,byte[] imgSubidaByte)

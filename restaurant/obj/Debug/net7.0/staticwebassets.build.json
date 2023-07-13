@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/rZ4Hh0fEnizxBAShzwR1fhD49yhZXBRRu9kRt/ycB4=",
+  "Hash": "wUHgIDQ3BB6A/Wu5kekM2gbBDR47Sh3z5KI5yMhg/2o=",
   "Source": "restaurant",
   "BasePath": "_content/restaurant",
   "Mode": "Default",
@@ -1477,6 +1477,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\userIcon.svg"
+    },
+    {
+      "Identity": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\js\\landinPageScript.js",
+      "SourceId": "restaurant",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\",
+      "BasePath": "_content/restaurant",
+      "RelativePath": "js/landinPageScript.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\landinPageScript.js"
     },
     {
       "Identity": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\js\\registrarProducto.js",

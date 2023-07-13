@@ -102,6 +102,23 @@
     color: white;
 }
 
+.CategoryHandler_categoryItem:hover{
+    width: 95px;
+    height: 40px;
+    background-color: #FF8C04;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 2px solid #FF8C04;
+    color: white;
+}
+
+#categorySelect{
+    display: none;
+}
+
 .CategoryHandler_categoryItem{
     width: 95px;
     height: 40px;

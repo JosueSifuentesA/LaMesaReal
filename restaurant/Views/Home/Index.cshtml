@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="~/css/mainPage.css">
 }
 
+@section Scripts{
+    <script src="~/js/landinPageScript.js"></script>
+}
+
 <section class="InformationSection">
     <div class="InformationSection_ImageContainer">
         <img class="ImageContainer_img" src="~/img/HeroImgMainPage.jpg">
@@ -30,33 +34,40 @@
 
 <section class="ProductSection">
 
-    <div class="ProductSectionHeader">
+    <form class="ProductSectionHeader" method="post" asp-action="Index" asp-controller="Home">
         <div class="CategoryHandler">
-            <div class="CategoryHandler_categoryItem-active">
-                <label>ALL</label>
+            <div id='category_0'  class="CategoryHandler_categoryItem">
+                <label>ALL</label> 
             </div>
-            <div class="CategoryHandler_categoryItem">
+            <div id='category_1' class="CategoryHandler_categoryItem">
                 <label>PASTA</label>
             </div>
-            <div class="CategoryHandler_categoryItem">
+            <div id='category_2'  class="CategoryHandler_categoryItem">
                 <label>CARNE</label>
             </div>
-            <div class="CategoryHandler_categoryItem">
+            <div id='category_3'  class="CategoryHandler_categoryItem">
                 <label>MARISCOS</label>
             </div>
-            <div class="CategoryHandler_categoryItem">
+            <div id='category_4'  class="CategoryHandler_categoryItem">
                 <label>VERDURAS</label>
             </div>
-            <div class="CategoryHandler_categoryItem">
+            <div id='category_5'  class="CategoryHandler_categoryItem">
                 <label>CERDO</label>
             </div>
         </div>
-        <form class="ProductSectionHeader_form">
-            <input class="CategoryHandler_input" type="text" placeholder="ej. Costillas de Cerdo">
+        <select id="categorySelect" name="categoria">
+            <option value="1">Pasta</option>
+            <option value="2">Carne</option>
+            <option value="3">Mariscos</option>
+            <option value="4">Verduras</option>
+            <option value="5">Cerdo</option>
+        </select>
+        <div class="ProductSectionHeader_form">
+            <input class="CategoryHandler_input"  name="nombrePlatillo" type="text" placeholder="ej. Costillas de Cerdo">
             <button class="form_btn" type="submit"/><img src="~/img/searchIcon.svg"/></button>
-        </form>
+        </div>
 
-    </div>
+    </form>
 
     <section class="productCardHandler">
         @foreach (var productos in Model)
@@ -73,5 +84,4 @@
             </div>
         }
     </section>
-
 </section>

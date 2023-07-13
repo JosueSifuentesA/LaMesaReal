@@ -37,7 +37,7 @@ namespace restaurant.Controllers
         {
             ViewBag.username = username;
             
-            var productos = _productoService.BuscarProductos();
+            var productos = _productoService.BuscarProductos().Result;
             return View(productos);
         }
 
@@ -50,9 +50,11 @@ namespace restaurant.Controllers
             {
                 if (fileImage != null && fileImage.imgSubida != null)
                 {
-                    await fileImage.imgSubida.CopyToAsync(ms);
-                    var imgSubidaByte = ms.ToArray();
-                    await _productoService.CrearProducto(nombrePlatillo,precioPlatillo,descripcionPlatillo,"FakeUrl",categoriaId,imgSubidaByte);
+                    if(ModelState.IsValid){
+                        await fileImage.imgSubida.CopyToAsync(ms);
+                        var imgSubidaByte = ms.ToArray();
+                        await _productoService.CrearProducto(nombrePlatillo,precioPlatillo,descripcionPlatillo,"FakeUrl",categoriaId,imgSubidaByte);
+                    }
                 }
                 else
                 {
