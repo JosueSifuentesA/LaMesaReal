@@ -1,0 +1,43 @@
+@model List<restaurant.Models.Producto>;
+
+@{
+    Layout = "_LayoutAdmin";
+}
+
+@section Scripts{
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/admin.css">
+}
+
+<section class="DishesSection">
+    <form class="DishesSection_form">
+        <input class="form_searchInput" name="nombreProducto" placeholder="Buscar.....">
+        <select class="form_categorySelect">
+            <option>PASTA</option>
+            <option>CARNE</option>
+            <option>CERDO</option>
+            <option>MARISCOS</option>
+            <option>VERDURAS</option>
+        </select>
+    </form>
+    <div class="DishesSection_DishesHandler">
+        @foreach(var item in Model){
+            <div class="DishesHandler_dishesCard">
+                <img class="dishesCard_img" src="data:image/jpeg;base64,@Convert.ToBase64String(@item.imgSubidaByte)"/>
+                
+                <div class="dishesCard_infoContainer">
+                    <div class="infoContainer_infoDishes">
+                        <label class="infoDishes_nombre">@item.nombre_producto</label>
+                        <label class="infoDishes_precio">S/@item.precio_producto</label>
+                    </div>
+                    <div class="infoContainer_optionDishes">
+                        <a asp-asp-controller="Admin">Edit</a>
+                        <a asp-asp-controller="Admin">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

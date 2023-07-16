@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .info_Handler{
     display: flex;
     flex-flow: column;
@@ -185,6 +191,98 @@
 
 .dropzoneContainer.dragover{
     border-color:#ff8c04b3;
+}
+
+
+/* AdminListarProductos */
+
+.DishesSection{
+    width: 90%;
+    margin: 50px auto;
+    padding: 0px 20px;
+}
+
+.DishesSection_form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_searchInput{
+    width: 80%;
+
+}
+
+.form_categorySelect{
+
+}
+
+.infoDishes_nombre{
+    font-size: 1.4em;
+}
+
+.infoDishes_precio{
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.DishesSection_DishesHandler{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 30px;
+
+}
+
+.DishesHandler_dishesCard{
+    width: 250px;
+    background-color: #FF8C04;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.25);
+}
+
+.dishesCard_img{
+    max-height: 142px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.dishesCard_infoContainer{
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+}
+
+.infoContainer_infoDishes{
+    display: flex;
+    flex-flow: column;
+}
+
+.infoContainer_infoDishes label{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: white;
+}
+
+
+
+.infoContainer_optionDishes{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    
+}
+
+.infoContainer_optionDishes a{
+    padding: 5px 10px;
+    width: 40%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #ffbe71b3;
 }
 
 table{

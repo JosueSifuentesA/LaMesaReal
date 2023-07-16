@@ -65,7 +65,6 @@ namespace restaurant.Controllers
             return View("Index");
         }
 
-        //[Authorize(Roles="ADMIN")]
         [HttpGet]
         [Route("/RegistrarProducto")]
         public IActionResult RegistrarProducto(){
@@ -73,6 +72,13 @@ namespace restaurant.Controllers
             var categorias = _categoriaService.ListarCategorias();
             return View("RegistrarProducto",categorias);
 
+        }
+
+
+        [HttpGet]
+        public IActionResult ListarProductos(){
+            var productos = _productoService.BuscarProductos().Result;
+            return View("ListaProductos",productos);
         }
 
 
