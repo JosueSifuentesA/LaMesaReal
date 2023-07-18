@@ -203,17 +203,30 @@
 }
 
 .DishesSection_form{
+
     display: flex;
+    gap: 20px;
     justify-content: space-between;
 }
 
 .form_searchInput{
-    width: 80%;
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid #FF8C04;
+    border-radius: 5px 0px 0px 5px;
+}
 
+.form_searchInput button{
+    background-color: orange;
+    padding: 5px;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
 }
 
 .form_categorySelect{
-
+    border: 2px solid #FF8C04;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .infoDishes_nombre{
@@ -223,6 +236,7 @@
 .infoDishes_precio{
     font-weight: 700;
     font-size: 1.2em;
+    color: #FF8C04;
 }
 
 .DishesSection_DishesHandler{
@@ -236,18 +250,34 @@
 
 .DishesHandler_dishesCard{
     width: 250px;
-    background-color: #FF8C04;
+    /*background-color: #FF8C04;*/
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     box-shadow: 3px 3px 6px rgba(0,0,0,0.25);
+    border: 3px dotted #FF8C04;
 }
 
 .dishesCard_img{
     max-height: 142px;
     border-radius: 10px 10px 0px 0px;
 }
+
+
+.scale-up-center{
+    animation:scale-up-center 0.5s; 
+  } 
+  
+  @keyframes scale-up-center{
+    0%{
+      transform:scale(.5)
+    } 
+    100%{
+      transform:scale(1)
+    } 
+  }
+  
 
 .dishesCard_infoContainer{
     padding: 20px;
@@ -265,7 +295,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: white;
 }
 
 
@@ -274,6 +303,7 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    color: white;
     
 }
 
@@ -282,7 +312,32 @@
     width: 40%;
     text-align: center;
     border-radius: 5px;
-    background-color: #ffbe71b3;
+    background-color: #FF8C04;
+    box-shadow: 1px 4px 3px rgba(0,0,0,0.25);
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.infoContainer_optionDishes a:hover{
+    background-color: transparent;
+    border: 2px #FF8C04 solid;
+    color: #FF8C04;
+    font-weight: 600;
+}
+
+.form_searchHandler{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form_searchHandler button{
+    padding: 5px;
+    background-color: #FF8C04;
+    border-radius: 0px 5px 5px 0px;
+    border:none;
 }
 
 table{
@@ -306,4 +361,13 @@ tr{
 
 td{
     padding: 10px;
+}
+
+
+@media(max-width:1000px){
+    .DishesSection_form{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+    }
 }

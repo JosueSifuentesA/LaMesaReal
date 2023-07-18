@@ -13,6 +13,14 @@
     position: relative;
 }
 
+.productCar_imgContainer{
+    max-height: 120px;
+}
+
+.productCar_imgContainer img{
+    width: 100%;
+}
+
 .productCard_information{
     display: flex;
     background-color: #FF8C04;

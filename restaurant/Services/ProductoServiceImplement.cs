@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using restaurant.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 
 using restaurant.Data;
 
@@ -25,6 +26,18 @@ namespace restaurant.Services
             return productos;
         }
     
+        public async Task<Producto> BuscarProductosPorId(int id){
+            
+            try{
+                var producto = await _context.DataProducto.FindAsync(id);
+                return producto;
+
+            }catch(Exception e){
+                Console.WriteLine(e);
+                return null;
+            }
+        }
+
         public async Task<List<Producto>> BuscarProductos(int categoria){
             var productos =  await _context.DataProducto.Where(prod => prod.categoriaProductoId == categoria).ToListAsync();
             return productos;
@@ -56,22 +69,40 @@ namespace restaurant.Services
 
         }
 
-        public async Task EditarProducto(int id,string nombre_producto,double precio_producto,string descripcion_producto,string url_image,int categoriaProductoId)
+        public async Task EditarProducto(int id,string nombre_producto,double precio_producto,string descripcion_producto,string url_image,int categoriaProductoId,UploadImgModel imgModel)
         {
             var producto = await _context.DataProducto.FindAsync(id);
-            producto.nombre_producto = nombre_producto;
-            producto.descripcion_producto = descripcion_producto;
-            producto.categoriaProductoId = categoriaProductoId;
-            producto.precio_producto = precio_producto;
-            producto.url_image = url_image;
 
-            await _context.SaveChangesAsync();
+            using(var ms = new MemoryStream()){
+
+                if(imgModel != null && imgModel.imgSubida != null){
+                    await imgModel.imgSubida.CopyToAsync(ms);
+                    var imgSubidaByte = ms.ToArray();
+                    producto.nombre_producto = nombre_producto;
+                    producto.descripcion_producto = descripcion_producto;
+                    producto.categoriaProductoId = categoriaProductoId;
+                    producto.precio_producto = precio_producto;
+                    producto.url_image = url_image;
+                    producto.imgSubidaByte=imgSubidaByte;
+                    await _context.SaveChangesAsync();
+                
+                }else{
+                    Console.WriteLine("Error , no se encontro la imagen");
+                }
+
+            }
 
         }
 
-        public Task EliminarProducto(int id)
+        public async Task EliminarProducto(int id)
         {
-            throw new NotImplementedException();
+            var producto = await _context.DataProducto.FindAsync(id);
+            if(producto != null){
+                _context.DataProducto.Remove(producto);
+                await _context.SaveChangesAsync();
+            }else{
+                Console.WriteLine("No se encontro dicho producto a eliminar");
+            }
         }
 
     }

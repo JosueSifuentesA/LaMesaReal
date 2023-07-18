@@ -11,6 +11,8 @@ namespace restaurant.Services
     {
         public Task<List<Producto>> BuscarProductos();
 
+        public Task<Producto> BuscarProductosPorId(int id);
+
         public Task<List<Producto>> BuscarProductos(int categoria);
 
         public Task<List<Producto>> BuscarProductos(string nombre);
@@ -19,7 +21,7 @@ namespace restaurant.Services
 
         public  Task EliminarProducto(int id);
 
-        public  Task EditarProducto(int id,string nombre_producto,double precio_producto,string descripcion_producto,string url_image,int categoriaProductoId);
+        public  Task EditarProducto(int id,string nombre_producto,double precio_producto,string descripcion_producto,string url_image,int categoriaProductoId,UploadImgModel imgModel);
 
     }
 }

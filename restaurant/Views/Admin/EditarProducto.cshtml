@@ -1,0 +1,69 @@
+@model  restaurant.Models.ListAndModel<CategoriaProducto,Producto>;
+
+@{
+    ViewData["Title"] = "Registrar Producto";
+    Layout = "_LayoutAdmin";
+    //var ModelList = Model.ToList();
+    Producto producto = Model.MiModelo;
+    List<CategoriaProducto> categorias = Model.MiLista;
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/admin.css">
+}
+
+
+<section class="sectionAñadirProductos">
+    <h1>Editar Platillo</h1>
+    <form asp-controller="Admin" asp-action="EditarProductoPost" method="post" enctype="multipart/form-data" class="formPlatillo">
+        
+        <div class="form_Platillo_infoContainer">
+            <input name="idPlatillo" style="display: none;" value="@producto.id_producto" type="hidden" readonly/>
+            <div class="formPlatillo_inputHandler">
+                <label>Nombre del Platillo</label>
+                <input name="nombrePlatillo" type="text" placeholder="Fideos con Albondigas" value="@producto.nombre_producto" required />
+            </div>
+
+            <div class="formPlatillo_inputHandler">
+                <label>Precio del Platillo</label>
+                <input name="precioPlatillo" type="number" value="@producto.precio_producto" step="0.01" placeholder="S/69.00" required />
+            </div>
+
+
+            <div class="formPlatillo_inputHandler">
+                <label>Categoria del Platillo</label>
+                <select name="categoriaId" required>
+                    @foreach (var item in categorias)
+                    {
+                        <option value="@item.id_categoria">@item.nombre_categoria</option>
+                    }
+                </select>
+            </div>
+
+            <div class="formPlatillo_inputHandler" style="display:flex;flex-flow:column;gap:10px">
+                <label>Descripcion del Platillo</label>
+                <textarea name="descripcionPlatillo" rows="5" cols="20" placeholder="Fideos con Albondigas" required>@producto.descripcion_producto</textarea>
+            </div>
+        </div>
+        <div class="form_Platillo_infoContainer">
+            <div class="formPlatillo_inputHandler">
+                <label for="fileInput">Imagen del Platillo</label>
+                <div class="dropzoneContainer">
+                    <input id="fileInput" name="imgSubida" type="file" required />
+                    <img id="fileImg" src="data:image/jpeg;base64,@Convert.ToBase64String(@producto.imgSubidaByte)"/>
+                    <div id="fileMessageContainer" class="dropzoneContainer_message">
+                        <h1>Arrastra una imagen para añadirla </h1>
+                        <h2>&#8595</h2>
+                    </div>
+                </div>
+            </div>
+
+            <button class="formPlatillo_btn" type="submit">Editar Platillo</button>
+        </div>
+
+    </form>
+</section>
+
+@section Scripts{
+    <script src="~/js/registrarProducto.js"></script>
+}

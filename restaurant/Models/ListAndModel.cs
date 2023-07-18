@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace restaurant.Models
 {
-    public class TwoListModel<T,U>
+    public class ListAndModel<L,M>
     {
-        public List<T> listProducto {get;set;}
-        public List<U> listCategoria {get;set;}
+        public List<L> MiLista { get; set; }
+        public M MiModelo { get; set; }
+
     }
 }

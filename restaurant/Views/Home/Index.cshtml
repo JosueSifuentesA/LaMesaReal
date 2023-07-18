@@ -73,7 +73,9 @@
         @foreach (var productos in Model)
         {
             <div class="productCard scale-up-center">
-                <img src="data:image/jpeg;base64,@Convert.ToBase64String(@productos.imgSubidaByte)"/>
+                <div class="productCar_imgContainer">
+                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(@productos.imgSubidaByte)"/>
+                </div>
                 <div class="productCard_price">
                     <label class="price_text">S/@productos.precio_producto</label>
                 </div>

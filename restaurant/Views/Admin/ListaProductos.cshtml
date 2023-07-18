@@ -13,7 +13,12 @@
 
 <section class="DishesSection">
     <form class="DishesSection_form">
-        <input class="form_searchInput" name="nombreProducto" placeholder="Buscar.....">
+        <div class="form_searchHandler">
+            <input class="form_searchInput" name="nombreProducto" placeholder="Buscar.....">
+            <button type="submit">
+                <img src="~/img/searchIcon.svg"/>
+            </button>
+        </div>
         <select class="form_categorySelect">
             <option>PASTA</option>
             <option>CARNE</option>
@@ -24,7 +29,7 @@
     </form>
     <div class="DishesSection_DishesHandler">
         @foreach(var item in Model){
-            <div class="DishesHandler_dishesCard">
+            <div class="DishesHandler_dishesCard scale-up-center">
                 <img class="dishesCard_img" src="data:image/jpeg;base64,@Convert.ToBase64String(@item.imgSubidaByte)"/>
                 
                 <div class="dishesCard_infoContainer">
@@ -33,8 +38,8 @@
                         <label class="infoDishes_precio">S/@item.precio_producto</label>
                     </div>
                     <div class="infoContainer_optionDishes">
-                        <a asp-asp-controller="Admin">Edit</a>
-                        <a asp-asp-controller="Admin">Delete</a>
+                        <a asp-asp-controller="Admin" asp-action="EditarProducto" asp-route-id="@item.id_producto">Edit</a>
+                        <a asp-asp-controller="Admin" asp-action="EliminarProducto" asp-route-id="@item.id_producto">Delete</a>
                     </div>
                 </div>
             </div>

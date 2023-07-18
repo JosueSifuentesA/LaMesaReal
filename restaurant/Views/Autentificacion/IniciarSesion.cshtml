@@ -7,7 +7,9 @@
 }
 
 <section class="containerForm">
-    <img class="containerForm_img" src="~/img/IniciarSesion.jpg"/>
+    <div class="containerForm_imgHandler">
+        <img class="containerForm_img" src="~/img/IniciarSesion.jpg"/>
+    </div>
     <form asp-controller="Autentificacion" asp-action="login" method="post" id="loginForm" class="containerForm_form">
             <div class="form_InicioSesion_inputHandler">
                 <label for="username">Usuario</label>
