@@ -26,6 +26,7 @@
 
 .AdminMainContainer{
     display: flex;
+    gap: 10px;
 }
 
 .dashboard_logs{
@@ -34,7 +35,6 @@
 
 .info_HandlerModules{
     display: flex;
-    /* border: 1px solid red; */
     min-width: 250px;
     width: 30%;
     justify-content: center;
@@ -297,13 +297,12 @@
     white-space: nowrap;
 }
 
-
-
 .infoContainer_optionDishes{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     color: white;
+    gap: 5px;
     
 }
 
@@ -318,6 +317,10 @@
     user-select: none;
     text-decoration: none;
     color: inherit;
+}
+
+.optionDishes_delete{
+
 }
 
 .infoContainer_optionDishes a:hover{
@@ -339,6 +342,15 @@
     border-radius: 0px 5px 5px 0px;
     border:none;
 }
+
+.navBarAdminComponent{
+    background-color: #FF8C04;
+    box-shadow: 0px 6px 6px rgba(0,0,0,0.25);
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+
+  }
 
 table{
     margin: 10px auto;
@@ -363,6 +375,58 @@ td{
     padding: 10px;
 }
 
+.UserSection{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.UserSection_imgHandler{
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+}
+
+.options_userActions{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    width: 40vw;
+    max-width: 250px;
+    border: 1px solid red;
+    position: absolute;
+    transform: translate(-90%);
+    display: flex;
+    flex-flow: column;
+}
+
+.sideBarButton_iconHandler{
+    background-color: #FF8C40;
+    height: min-content;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    box-sizing: border-box;
+}
+
+.sideBarButton{
+    display: flex;
+    align-items: center;
+    flex-flow: column-reverse;
+    min-width: 85px;
+    height: min-content;
+    position: sticky;
+    top: 113px;
+    z-index: 1;
+}
+
+.hidden{
+    display: none;
+}
+
 
 @media(max-width:1000px){
     .DishesSection_form{
@@ -371,3 +435,28 @@ td{
         justify-content: space-between;
     }
 }
+
+
+@media(max-width:650px){
+    .sideBarButton{
+        display: flex;
+        align-items: center;
+        flex-flow: column-reverse;
+        min-width: 85px;
+    }
+
+    .AdminMainContainer{
+      flex-flow: column;
+    }
+    
+    .sideBarMenu_content{
+        flex-flow: row;
+        padding: 3%;
+        flex-wrap: wrap;
+    }
+
+    .formPlatillo{
+        flex-flow: column;
+    }
+
+  }

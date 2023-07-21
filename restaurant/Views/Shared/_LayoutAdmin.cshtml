@@ -3,175 +3,77 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     @if(User.Identity.IsAuthenticated){
-        <title>@ViewData["Title"] - Autenticado</title>
-    }else{
-        <title>@ViewData["Title"] - No Autenticado</title>
-    }
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/restaurant.styles.css" asp-append-version="true" />
     @await RenderSectionAsync("Styles", required: false)
 </head>
 <body>
     <header>
-        <nav class="navBarComponent navbar navbar-expand-sm navbar-toggleable-sm navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Admin" asp-action="Index"><img src="~/img/RestaurantLogo.png"/></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navBarComponent_linksHandler navbar-collapse collapse">
-                    <ul class="linksHandler_pageModules navbar-nav flex-grow-1">
-
-                        @if(!User.Identity.IsAuthenticated){
-                            <li class="pageModules_authItems nav-item">
-                                <a asp-controller="Autentificacion" asp-action="IniciarSesion">Iniciar Sesion</a>
-                            </li>
-                            <li class="pageModules_authItems nav-item">
-                                <a asp-controller="Autentificacion" asp-action="Registrarse">Registrarse</a>
-                            </li>
-                        }else{
-                            <li id="test" class="pageModules_authItems nav-item">
-                                <a asp-controller="Autentificacion" asp-action="logout">Bienvenido @User.Identity.Name!</a>
-                            </li>
-                        }
-                    </ul>
-                    
-
-                </div>
-            </div>
+        <nav class="navBarAdminComponent">
+            <a class="navbar-brand" asp-area="" asp-controller="Admin" asp-action="Index"><img src="~/img/RestaurantLogo.png"/></a>
+                <ul class="linksHandler_pageModules">
+                    @if(!User.Identity.IsAuthenticated){
+                        <li class="pageModules_authItems nav-item">
+                            <a asp-controller="Autentificacion" asp-action="IniciarSesion">Iniciar Sesion</a>
+                        </li>
+                    }else{
+                        <div id="test" class="UserSection">
+                            <div class="UserSection_imgHandler">
+                                <img class="imgHandler_avatarImage" src="~/img/userCircleIcon.svg"/>
+                            </div>
+                            <div class="UserSection_options hidden">
+                                <div class="options_userActions">
+                                    <label>@User.Identity.Name</label>
+                                    <a asp-controller="Autentificacion" asp-action="logout">Cerrar Sesion</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </ul>
         </nav>
     </header>
 
 
 
     <main role="main" class="AdminMainContainer">
-        <section id="sideBarMenu" class="sideBarMenu hidden">
-        <div class="sideBarMenu_content">
-            <div class="sideBarMenu_producto">
-                <div class="option_header producto_header">
-                    <img class="svgEmbed" type="image/svg+xml" src="~/img/shoppingBag.svg"/>
-                    <label>Productos</label>
-                    <img class="svgEmbed" type="image/svg+xml" src="~/img/chevronDown.svg"/>
+        <div class="sideBarButton">
+            <div class="sideBarButton_iconHandler" style="display: none;">
+                <img src="~/img/OfertasIcon.svg"/>
+            </div>
+            <section id="sideBarMenu" class="sideBarMenu">
+            <div class="sideBarMenu_content">
+                <div class="sideBarMenu_option">
+                    <a asp-controller="Admin" asp-action="ListarProductos" class="option_header producto_header">
+                        <img class="svgEmbed" type="image/svg+xml" src="~/img/shoppingBag.svg"/>
+                    </a>
                 </div>
-                <div class="optionsHandler">
-                    <div class="optionsHandler_option optionAddProduct">
-                        <a asp-controller="Admin" asp-action="RegistrarProducto">Añadir producto</a>
-                    </div>
 
-                    <div class="optionsHandler_option optionEditProduct">
-                        <a>Editar producto</a>
+                <div class="sideBarMenu_option">
+                    <div class="option_header repartidores_header">
+                        <img class="svgEmbed" src="~/img/sideBarDeliveryIcon.svg"/>
                     </div>
+                </div>
 
-                    <div class="optionsHandler_option optionDeleteProduct">
-                        <a>Eliminar producto</a>
+                <div class="sideBarMenu_option">
+                    <div class="option_header Categorias_header">
+                        <img class="svgEmbed" src="~/img/categoryIcon.svg"/>
                     </div>
+                </div>
 
-                    <div class="optionsHandler_option optionListProduct">
-                        <a asp-action="ListarProductos" asp-controller="Admin">Listar productos</a>
+                <div class="sideBarMenu_option">
+                    <div class="option_header pedidos_header">
+                        <img class="svgEmbed" src="~/img/OrangeCartIcon.svg"/>
+                    </div>
+                </div>
+
+                <div class="sideBarMenu_option">
+                    <div class="option_header usuarios_header">
+                        <img class="svgEmbed" src="~/img/userIcon.svg"/>
                     </div>
                 </div>
             </div>
-
-            <div class="sideBarMenu_repartidores">
-                <div class="option_header repartidores_header">
-                    <img class="svgEmbed" src="~/img/sideBarDeliveryIcon.svg"/>
-                    <label>Repartidores</label>
-                    <img class="svgEmbed" src="~/img/chevronDown.svg"/>
-                </div>
-
-                <div class="optionsHandler">
-                    <div class="optionsHandler_option optionAddDelivery">
-                        <a>Añadir repartidor</a>
-                    </div>
-                    <div class="optionsHandler_option optionEditDelivery">
-                        <a>Editar repartidor</a>
-                    </div>
-                    <div class="optionsHandler_option optionDeleteDelivery">
-                        <a>Eliminar repartidor</a>
-                    </div>
-                    <div class="optionsHandler_option optionListDelivery">
-                        <a>Listar repartidores</a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="sideBarMenu_Categorias">
-                <div class="option_header Categorias_header">
-                    <img class="svgEmbed" src="~/img/categoryIcon.svg"/>
-                    <label>Categorias</label>
-                    <img class="svgEmbed" src="~/img/chevronDown.svg"/>
-                </div>
-                <div class="optionsHandler">
-                    <div class="optionsHandler_option optionAddDelivery">
-                        <a>Añadir categoria</a>
-                    </div>
-
-                    <div class="optionsHandler_option optionEditDelivery">
-                        <a>Editar categoria</a>
-                    </div>
-
-                    <div class="optionsHandler_option optionDeleteDelivery">
-                        <a>Eliminar categoria</a>
-                    </div>
-
-                    <div class="optionsHandler_option optionListDelivery">
-                        <a>Listar categoria</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sideBarMenu_pedidos">
-                <div class="option_header pedidos_header">
-                    <img class="svgEmbed" src="~/img/OrangeCartIcon.svg"/>
-                    <label>Pedidos</label>
-                    <img class="svgEmbed" src="~/img/chevronDown.svg"/>
-                </div>
-                <div class="optionsHandler">
-                    <div class="optionsHandler_option optionEditOrder">
-                        <a>Editar pedido</a>
-                    </div>
-
-                    <div class="optionsHandler_option optionDeleteOrder">
-                        <a>Eliminar pedido</a>
-                    </div>
-
-                    <div class="optionsHandler_option optionListOrder">
-                        <a>Listar pedidos</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sideBarMenu_usuarios">
-                <div class="option_header usuarios_header">
-                    <img class="svgEmbed" src="~/img/userIcon.svg"/>
-                    <a>Usuarios</a>
-                    <img class="svgEmbed" src="~/img/chevronDown.svg"/>
-                </div>
-                <div class="optionsHandler">
-                    <div class="optionsHandler_option optionAddUser">
-                        <a>Añadir usuario</a>
-                    </div>
-
-                    <div class="optionsHandler_option optionEditUser">
-                        <a>Editar usuario</a>
-                    </div>
-
-                    <div class="optionsHandler_option optionDeleteUser">
-                        <a>Eliminar usuarios</a>
-                    </div>
-
-                    <div class="optionsHandler_option optionListUser">
-                        <a>Listar usuarios</a>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
-
-        </section>
         @RenderBody()
     </main>
 
@@ -190,14 +92,16 @@
 <script>
 
     $(document).ready(()=>{
-        
-        //$(".sideBarMenu").hide();
-        $("#test").on("click",()=>{
-            $(".sideBarMenu").slideToggle(()=>{
-                $(".sideBarMenu").css("display:flex")
-            });
+        /*$(".sideBarButton").on("click",()=>{
+            $(".sideBarMenu").slideToggle();
             $(".sideBarMenu").removeClass("hidden")
+        });*/
+
+        $("#test").on("click",()=>{
+            $(".UserSection_options").toggle();
+            $(".UserSection_options").removeClass("hidden")
         });
+
             const optionHeader = $(".option_header");
             $(optionHeader).siblings().hide();
 

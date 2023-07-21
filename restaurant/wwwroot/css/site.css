@@ -27,6 +27,12 @@ body {
   margin-bottom: 60px;
 }
 
+header{
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
 .navBarComponent{
   background-color: #FF8C04;
   box-shadow: 0px 6px 6px rgba(0,0,0,0.25);
@@ -57,19 +63,29 @@ body {
   padding: 10px 0px;
 }
 
+.sideBarMenu_option{
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #efefefa1;
+  justify-content: center;
+}
+
 .sideBarMenu_content{
   display: flex;
   flex-flow: column;
   gap: 10px;
-  padding: 20px;
-  height: 100%;
+  padding: 10px;
   justify-content: space-around;
 }
 
 .sideBarMenu{
   border: 1px solid orange;
-  width: 20vw;
   box-shadow: 3px 0px 4px 0px rgba(0,0,0,0.25);
+  height: min-content;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hidden{
@@ -104,7 +120,7 @@ body {
 }
 
 .option_header img{
-  width: 15%;
+  width: 2em;
 }
 
 a img {

@@ -38,8 +38,8 @@
                         <label class="infoDishes_precio">S/@item.precio_producto</label>
                     </div>
                     <div class="infoContainer_optionDishes">
-                        <a asp-asp-controller="Admin" asp-action="EditarProducto" asp-route-id="@item.id_producto">Edit</a>
-                        <a asp-asp-controller="Admin" asp-action="EliminarProducto" asp-route-id="@item.id_producto">Delete</a>
+                        <a  class="optionDishes_edit" asp-asp-controller="Admin" asp-action="EditarProducto" asp-route-id="@item.id_producto">Edit</a>
+                        <a  class="optionDishes_delete" asp-asp-controller="Admin" asp-action="EliminarProducto" asp-route-id="@item.id_producto">Delete</a>
                     </div>
                 </div>
             </div>

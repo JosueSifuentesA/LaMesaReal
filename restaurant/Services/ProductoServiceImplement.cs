@@ -87,7 +87,12 @@ namespace restaurant.Services
                     await _context.SaveChangesAsync();
                 
                 }else{
-                    Console.WriteLine("Error , no se encontro la imagen");
+                    producto.nombre_producto = nombre_producto;
+                    producto.descripcion_producto = descripcion_producto;
+                    producto.categoriaProductoId = categoriaProductoId;
+                    producto.precio_producto = precio_producto;
+                    producto.url_image = url_image;
+                    await _context.SaveChangesAsync();
                 }
 
             }
