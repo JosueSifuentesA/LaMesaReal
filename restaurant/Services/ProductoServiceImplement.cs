@@ -22,7 +22,6 @@ namespace restaurant.Services
         public async Task<List<Producto>> BuscarProductos()
         {
             var productos = await _context.DataProducto.ToListAsync();
-            //var productos = from p in _context.DataProducto select p;
             return productos;
         }
     

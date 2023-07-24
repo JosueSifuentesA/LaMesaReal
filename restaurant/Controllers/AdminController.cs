@@ -62,7 +62,7 @@ namespace restaurant.Controllers
                 }
             }
 
-            return View("Index");
+            return RedirectToAction("ListarProductos","Admin");
         }
 
         [HttpGet]
@@ -73,7 +73,6 @@ namespace restaurant.Controllers
             return View("RegistrarProducto",categorias);
 
         }
-
 
         [HttpGet]
         [Route("/ListaProductos")]
@@ -123,8 +122,6 @@ namespace restaurant.Controllers
 
 
         [HttpGet("Error")]
-
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -15,6 +15,7 @@
 
 .productCar_imgContainer{
     max-height: 120px;
+    overflow: hidden;
 }
 
 .productCar_imgContainer img{

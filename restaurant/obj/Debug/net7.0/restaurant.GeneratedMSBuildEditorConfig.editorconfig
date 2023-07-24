@@ -28,10 +28,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdGFyUmVwYXJ0aWRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josue/OneDrive/Escritorio/Programacion_Invierno/RestaurantDotnet/restaurant/Views/Admin/EditarUsuario.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdGFyVXN1YXJpby5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/josue/OneDrive/Escritorio/Programacion_Invierno/RestaurantDotnet/restaurant/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,10 +44,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVnaXN0cmFyUmVwYXJ0aWRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josue/OneDrive/Escritorio/Programacion_Invierno/RestaurantDotnet/restaurant/Views/Admin/RegistrarUsuario.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVnaXN0cmFyVXN1YXJpby5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/josue/OneDrive/Escritorio/Programacion_Invierno/RestaurantDotnet/restaurant/Views/Autentificacion/IniciarSesion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0ZW50aWZpY2FjaW9uXEluaWNpYXJTZXNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,10 +54,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/josue/OneDrive/Escritorio/Programacion_Invierno/RestaurantDotnet/restaurant/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/josue/OneDrive/Escritorio/Programacion_Invierno/RestaurantDotnet/restaurant/Views/Home/IndexUsuario.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleFVzdWFyaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/josue/OneDrive/Escritorio/Programacion_Invierno/RestaurantDotnet/restaurant/Views/Shared/Error.cshtml]
@@ -86,6 +74,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/josue/OneDrive/Escritorio/Programacion_Invierno/RestaurantDotnet/restaurant/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josue/OneDrive/Escritorio/Programacion_Invierno/RestaurantDotnet/restaurant/Views/Usuario/IndexUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleFVzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josue/OneDrive/Escritorio/Programacion_Invierno/RestaurantDotnet/restaurant/Views/Usuario/VerPerfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xWZXJQZXJmaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/josue/OneDrive/Escritorio/Programacion_Invierno/RestaurantDotnet/restaurant/Views/_ViewImports.cshtml]

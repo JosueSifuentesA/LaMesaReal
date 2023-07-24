@@ -17,5 +17,18 @@ $(document).ready(function() {
         console.log($("#category.Select").val())
 
     });
+
+    $("#test").on("click",()=>{
+      $(".UserSection_options").toggle();
+      $(".UserSection_options").removeClass("hidden")
+    });
+
+      const optionHeader = $(".option_header");
+      $(optionHeader).siblings().hide();
+
+      $(optionHeader).on("click",()=>{
+          $(event.currentTarget).siblings().slideToggle();
+      })
+
   });
   

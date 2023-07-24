@@ -56,8 +56,11 @@ namespace restaurant.Controllers
 
                 var claims = new List<Claim>{
                     new Claim(ClaimTypes.Name, username),
-                    new Claim(ClaimTypes.Role,  user.rol_usuario)
+                    new Claim(ClaimTypes.Role,  user.rol_usuario),
+                    new Claim("idUser",user.id_usuario.ToString())
+                    
                 };
+                //
                 var claimsIdentity = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,new ClaimsPrincipal(claimsIdentity));
                 Console.WriteLine(claims[1].ToString());
@@ -69,7 +72,7 @@ namespace restaurant.Controllers
                     case "ADMIN": 
                         return RedirectToAction("Index","Admin",new {userId=user.id_usuario,username=username,userRol=user.rol_usuario});                  
                     case "USUARIO":
-                        return RedirectToAction("Index","Usuario");                   
+                        return RedirectToAction("IndexUsuario","Usuario");                   
                     case "REPARTIDOR":
                         return RedirectToAction("Index","Repartidor");
                     default:

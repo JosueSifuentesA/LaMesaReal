@@ -26,6 +26,9 @@
             <option>MARISCOS</option>
             <option>VERDURAS</option>
         </select>
+        <div class="addDishesHandler">
+            <a asp-controller="Admin" asp-action="RegistrarProducto">Añadir Platillo</a>
+        </div>
     </form>
     <div class="DishesSection_DishesHandler">
         @foreach(var item in Model){

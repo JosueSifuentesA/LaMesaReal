@@ -1,7 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Authorization
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +19,11 @@
     <header>
         <nav class="navBarComponent navbar navbar-expand-sm navbar-toggleable-sm navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/img/RestaurantLogo.png"/></a>
+                @if(User.Identity.IsAuthenticated){
+                    <a class="navbar-brand" asp-area="" asp-controller="Usuario" asp-action="IndexUsuario"><img src="~/img/RestaurantLogo.png"/></a>
+                }else{
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/img/RestaurantLogo.png"/></a>
+                }
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -42,9 +44,18 @@
                                 <a asp-controller="Autentificacion" asp-action="Registrarse">Registrarse</a>
                             </li>
                         }else{
-                            <li>
-                                <a asp-controller="Autentificacion" asp-action="logout">Cerrar Sesion</a>
-                            </li>
+                            <div id="test" class="UserSection">
+                                <div class="UserSection_imgHandler">
+                                    <img class="imgHandler_avatarImage" src="~/img/userCircleIcon.svg"/>
+                                </div>
+                                <div class="UserSection_options hidden">
+                                    <div class="options_userActions">
+                                        <label>@User.Identity.Name</label>
+                                        <a asp-controller="Usuario" asp-action="VerPerfil" asp-route-idUser='@User.FindFirst("idUser")?.Value'>Ver Perfil</a>
+                                        <a asp-controller="Autentificacion" asp-action="logout">Cerrar Sesion</a>
+                                    </div>
+                                </div>
+                            </div>
                         }
 
                     </ul>

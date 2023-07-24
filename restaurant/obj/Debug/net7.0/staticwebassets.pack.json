@@ -97,6 +97,10 @@
       "PackagePath": "staticwebassets\\img\\task.svg"
     },
     {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\userCircleIcon.svg",
+      "PackagePath": "staticwebassets\\img\\userCircleIcon.svg"
+    },
+    {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\userIcon.svg",
       "PackagePath": "staticwebassets\\img\\userIcon.svg"
     },

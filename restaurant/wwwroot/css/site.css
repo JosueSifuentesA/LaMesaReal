@@ -127,6 +127,32 @@ a img {
   margin: 0px 5px;
 }
 
+.UserSection{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.UserSection_imgHandler{
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+}
+
+.options_userActions{
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+  width: 40vw;
+  max-width: 250px;
+  border: 1px solid red;
+  position: absolute;
+  transform: translate(-90%);
+  display: flex;
+  flex-flow: column;
+}
+
 
 .scale-up-center{
   animation:scale-up-center 0.5s; 
