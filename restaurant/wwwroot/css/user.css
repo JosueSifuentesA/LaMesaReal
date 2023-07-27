@@ -1,0 +1,111 @@
+.HomeMainContainer{
+    flex: 1;
+    background-color: #f3f3f3;
+}
+
+.perfilSection{
+    display: flex;
+    height: 100%;
+}
+
+.sideBar{
+    border: 1px solid orange;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    background-color: white;
+}
+
+.userContainer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.imgHandler_img{
+    border-radius: 50%; 
+    width: 100px;
+    height: 100px;
+    border: 2px solid orange;
+}
+
+
+
+.userDashboard{
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    gap: 50px;
+    
+}
+
+.userDashboard_shoppingCart{
+    display: flex;
+    flex-flow: column;
+}
+
+.shoppingCart_cart{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    overflow: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.shoppingCart_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart_product{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    font-weight: 700;
+    border-bottom: 2px solid orange;
+    padding: 10px;
+}
+
+.product_dataHandler{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 40%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dataHandler_quantity{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.quantity_counter{
+    padding: 10px;
+    background-color: orange;
+    border-radius: 10px;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dataHandler_quantityOptions{
+    display: flex;
+
+}
+
+
+.orders_ordersHandler{
+    background-color: white;
+    border-radius: 10px;
+}

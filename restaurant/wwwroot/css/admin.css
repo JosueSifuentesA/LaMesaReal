@@ -27,6 +27,7 @@
 .AdminMainContainer{
     display: flex;
     gap: 10px;
+    flex: 1;
 }
 
 .dashboard_logs{
@@ -245,6 +246,8 @@
     gap: 10px;
     justify-content: center;
     margin: 30px;
+    overflow: auto;
+    max-height: 70vh;
 
 }
 
@@ -386,32 +389,6 @@ tr{
 td{
     padding: 10px;
 }
-/*
-.UserSection{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-}
-
-.UserSection_imgHandler{
-    background-color: white;
-    border-radius: 50px;
-    display: flex;
-}
-
-.options_userActions{
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-    gap: 10px;
-    width: 40vw;
-    max-width: 250px;
-    border: 1px solid red;
-    position: absolute;
-    transform: translate(-90%);
-    display: flex;
-    flex-flow: column;
-}*/
 
 .sideBarButton_iconHandler{
     background-color: #FF8C40;
