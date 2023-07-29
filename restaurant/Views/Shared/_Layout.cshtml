@@ -17,31 +17,23 @@
 </head>
 <body>
     <header>
-        <nav class="navBarComponent navbar navbar-expand-sm navbar-toggleable-sm navbar-light">
-            <div class="container-fluid">
+        <nav class="navBarComponent">
                 @if(User.Identity.IsAuthenticated){
                     <a class="navbar-brand" asp-area="" asp-controller="Usuario" asp-action="IndexUsuario"><img src="~/img/RestaurantLogo.png"/></a>
                 }else{
                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/img/RestaurantLogo.png"/></a>
                 }
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navBarComponent_linksHandler navbar-collapse collapse">
-                    <ul class="linksHandler_pageModules navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                <div class="navBarComponent_linksHandler">
+                    <ul class="linksHandler_pageModules">
+                        <li class="pageModules_item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/img/CartIcon.svg"/>Carrito</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="pageModules_item">
                             <a class="nav-link text-light"><img src="~/img/OfertasIcon.svg"/>Ofertas</a>
                         </li>
                         @if(!User.Identity.IsAuthenticated){
                             <li class="pageModules_authItems nav-item">
-                                <a asp-controller="Autentificacion" asp-action="IniciarSesion">Iniciar Sesion</a>
-                            </li>
-                            <li class="pageModules_authItems nav-item">
-                                <a asp-controller="Autentificacion" asp-action="Registrarse">Registrarse</a>
+                                <a asp-controller="Autentificacion" asp-action="Registrarse">Empezar ya</a>
                             </li>
                         }else{
                             <div id="test" class="UserSection">
@@ -57,13 +49,18 @@
                                 </div>
                             </div>
                         }
-
                     </ul>
-                    
-
                 </div>
-            </div>
+            
         </nav>
+        <div class="cellNavBar">
+            <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/img/CartIcon.svg"/>Carrito</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light"><img src="~/img/OfertasIcon.svg"/>Ofertas</a>
+            </li>
+        </div>
     </header>
     <main role="main" class="HomeMainContainer">
         @RenderBody()

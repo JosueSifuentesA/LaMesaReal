@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\css\\user.css",
+      "PackagePath": "staticwebassets\\css\\user.css"
+    },
+    {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -103,6 +107,10 @@
     {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\userIcon.svg",
       "PackagePath": "staticwebassets\\img\\userIcon.svg"
+    },
+    {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\js\\ShopingCart.js",
+      "PackagePath": "staticwebassets\\js\\ShopingCart.js"
     },
     {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\js\\landinPageScript.js",

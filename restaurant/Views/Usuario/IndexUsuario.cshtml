@@ -2,6 +2,8 @@
 
 @{
     ViewData["Title"] = "Home Page";
+    var model = @Model.ToArray();
+    int numberProducts = model.Length;
 }
 @section Styles {
     <link rel="stylesheet" href="~/css/mainPage.css">
@@ -9,6 +11,7 @@
 
 @section Scripts{
     <script src="~/js/landinPageScript.js"></script>
+    <script src="~/js/ShopingCart.js"></script>
 }
 
 <section class="InformationSection">
@@ -33,7 +36,9 @@
 
 
 <section class="ProductSection">
-
+    @if(numberProducts > 0){
+        <h2 class="ProductSection_h2">CONTAMOS CON MÁS DE @numberProducts PLATILLOS </h2>
+    }
     <form class="ProductSectionHeader" method="post" asp-action="IndexUsuario" asp-controller="Usuario">
         <div class="CategoryHandler">
             <div id='category_0'  class="CategoryHandler_categoryItem">

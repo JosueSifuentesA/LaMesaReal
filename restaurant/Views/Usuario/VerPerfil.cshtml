@@ -1,9 +1,12 @@
+@using Microsoft.AspNetCore.Authorization
+
 @section Styles{
     <link rel="stylesheet" href="~/css/user.css">
 }
 
 @section Scripts{
     <script src="~/js/landinPageScript.js"></script>
+    <script src="~/js/ShopingCart.js"></script>
 }
 
 <section class="perfilSection">
@@ -12,7 +15,7 @@
             <div class="userContainer_imgHandler">
                 <img class="imgHandler_img">
             </div>
-            <label>josue123</label>
+            <label>@User.Identity.Name</label>
         </div>
         <div>
             <label>Mi perfil</label>
@@ -26,34 +29,7 @@
                 <h1 class="header_tittle">Mi carrito de compras</h1>
                 <h2 class="header_totalAmount">Total a Pagar: S/70.00</h2>
             </div>
-            <div class="shoppingCart_cart">
-                <div class="cart_product">
-                    <img class="product_img">
-                    <div class="product_dataHandler">
-                        <label class="product_name">Ensalada real</label>
-                        <div class="dataHandler_quantity">
-                            <label class="quantity_label">Cantidad</label>
-                            <div class="quantity_counter">
-                                <label>1</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product_dataHandler">
-                        <label class="dataHandler_price">S/28.00</label>
-                        <div class="dataHandler_quantityOptions">
-                            <div class="quantityOptions_add">
-                                <label>+</label>
-                            </div>
-                            <div class="quantityOptions_sustract">
-                                <label>-</label>
-                            </div>
-                            <div class="quantityOptions_delete">
-                                <label>0</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="shoppingCart_cart"></div>
         </div>
         <div class="userDashboard_orders">
             <h1>Mis Pedidos</h1>

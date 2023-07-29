@@ -2,6 +2,8 @@
 
 @{
     ViewData["Title"] = "Home Page";
+    var model = @Model.ToArray();
+    int lenght = model.Length;
 }
 @section Styles {
     <link rel="stylesheet" href="~/css/mainPage.css">
@@ -33,7 +35,7 @@
 
 
 <section class="ProductSection">
-
+    <h2 class="ProductSection_h2">CONTAMOS CON MÁS DE @lenght PLATILLOS </h2>
     <form class="ProductSectionHeader" method="post" asp-action="Index" asp-controller="Home">
         <div class="CategoryHandler">
             <div id='category_0'  class="CategoryHandler_categoryItem">

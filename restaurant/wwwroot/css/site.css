@@ -8,6 +8,10 @@ html {
   font-size: 14px;
 }
 
+a{
+  text-decoration: none;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -37,10 +41,25 @@ header{
   z-index: 2;
 }
 
+.cellNavBar{
+  display: flex;
+}
+
+.cellNavBar{
+  background-color: orange;
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
 .navBarComponent{
   background-color: #FF8C04;
   box-shadow: 0px 6px 6px rgba(0,0,0,0.25);
-  padding: 0px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .linksHandler_pageModules{
@@ -51,7 +70,7 @@ header{
   font-weight: 600;
 }
 
-.pageModules_authItems{
+/*.pageModules_authItems{
   display: inline-flex;
   align-items: center;
   background-color: white;
@@ -61,10 +80,83 @@ header{
   max-height: 50px;
   justify-content: center;
   text-align: center;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+
+.pageModules_authItems:hover{
+  background-color: transparent;
+  color: white;
+}*/
+.pageModules_authItems a{
+  color: inherit;
+}
+
+.pageModules_authItems {
+  --color: #FF8C04;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: color .5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  background-color: white;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+.pageModules_authItems:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.pageModules_authItems:hover {
+  color: #fff;
+}
+
+.pageModules_authItems:before {
+  top: 100%;
+  left: 100%;
+  transition: all .7s;
+}
+
+.pageModules_authItems:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.pageModules_authItems:active:before {
+  background: transparent;
+  transition: background 0s;
+}
+
+.loginButton{
+  background-color: transparent;
+}
+
+.loginButton a{
+  color: white;
 }
 
 .navBarComponent_linksHandler{
   padding: 10px 0px;
+  align-items: center;
+  display: flex;
 }
 
 .sideBarMenu_option{
@@ -157,10 +249,17 @@ a img {
   flex-flow: column;
 }
 
+.pageModules_item{
+  list-style-type: none;
+}
 
 .scale-up-center{
   animation:scale-up-center 0.5s; 
 } 
+
+.nav-item{
+  list-style-type: none;
+}
 
 @keyframes scale-up-center{
   0%{
@@ -177,5 +276,14 @@ a img {
   .pageModules_authItems{
     width: 120px;
   }
+
+  .cellNavBar{
+    display: flex;
+  }
+
+  .pageModules_item{
+    display: none;
+  }
+  
 
 }
