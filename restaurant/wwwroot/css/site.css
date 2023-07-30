@@ -32,16 +32,36 @@ body {
   margin-bottom: 60px;
   display: flex;
   flex-flow: column;
+  background-color: #f3f3f3;
 }
 
 header{
   position: sticky;
   top: 0px;
-  z-index: 2;
+  z-index: 3;
 }
 
 
+.navBarComponent{
+  position: relative;
+  background-color: transparent;
+  box-shadow: 0px 6px 6px rgba(0,0,0,0.25);
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.navBarComponent::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.116);
+  filter: blur(8px);
+  z-index: 4;
+}
 .cellNavBar{
   background-color: #FF8C04;
   display: none;
@@ -50,43 +70,13 @@ header{
   box-shadow: 0px 6px 6px rgba(0,0,0,0.25);
 }
 
-
-.navBarComponent{
-  background-color: #FF8C04;
-  box-shadow: 0px 6px 6px rgba(0,0,0,0.25);
-  padding: 0px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .linksHandler_pageModules{
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 40px;
   align-items: center;
   font-weight: 600;
 }
-
-/*.pageModules_authItems{
-  display: inline-flex;
-  align-items: center;
-  background-color: white;
-  padding: 15px;
-  border-radius: 15px;
-  color: #FF8C04;
-  max-height: 50px;
-  justify-content: center;
-  text-align: center;
-  border: 2px solid white;
-  cursor: pointer;
-}
-
-
-.pageModules_authItems:hover{
-  background-color: transparent;
-  color: white;
-}*/
 .pageModules_authItems a{
   color: inherit;
 }
@@ -94,7 +84,8 @@ header{
 .pageModules_authItems {
   --color: #FF8C04;
   font-family: inherit;
-  display: inline-block;
+  display: flex;
+
   width: 8em;
   height: 2.6em;
   line-height: 2.5em;
@@ -109,7 +100,6 @@ header{
   font-weight: 500;
   color: #000;
   text-align: center;
-  cursor: pointer;
   border: 2px solid #fff;
 }
 
@@ -141,6 +131,11 @@ header{
 .pageModules_authItems:active:before {
   background: transparent;
   transition: background 0s;
+}
+
+.pageModules_authItems a{
+  width: 100%;
+  height: 100%;
 }
 
 .loginButton{
@@ -251,6 +246,12 @@ a img {
   list-style-type: none;
 }
 
+.pageModules_item a {
+  color: #000;
+  font-weight: 400;
+  text-decoration: none;
+}
+
 .scale-up-center{
   animation:scale-up-center 0.5s; 
 } 
@@ -268,6 +269,12 @@ a img {
   } 
 }
 
+@media(max-width:1000px){
+  .navBarComponent{
+    background-color: #FF8C04;
+  }
+}
+
 
 @media(max-width:700px){
 
@@ -282,6 +289,4 @@ a img {
   .pageModules_item{
     display: none;
   }
-  
-
 }

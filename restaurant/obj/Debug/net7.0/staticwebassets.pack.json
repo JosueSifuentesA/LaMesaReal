@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\img\\CartIcon.svg"
     },
     {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\CartIconB.svg",
+      "PackagePath": "staticwebassets\\img\\CartIconB.svg"
+    },
+    {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\DeliveryIcon.svg",
       "PackagePath": "staticwebassets\\img\\DeliveryIcon.svg"
     },
@@ -57,6 +61,10 @@
       "PackagePath": "staticwebassets\\img\\OfertasIcon.svg"
     },
     {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\OfertasIconB.svg",
+      "PackagePath": "staticwebassets\\img\\OfertasIconB.svg"
+    },
+    {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\OrangeCartIcon.svg",
       "PackagePath": "staticwebassets\\img\\OrangeCartIcon.svg"
     },
@@ -69,6 +77,14 @@
       "PackagePath": "staticwebassets\\img\\RestaurantLogo.png"
     },
     {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\blob.svg",
+      "PackagePath": "staticwebassets\\img\\blob.svg"
+    },
+    {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\blobIcon.svg",
+      "PackagePath": "staticwebassets\\img\\blobIcon.svg"
+    },
+    {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\categoryIcon.svg",
       "PackagePath": "staticwebassets\\img\\categoryIcon.svg"
     },
@@ -79,6 +95,10 @@
     {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\cryptocurrency.svg",
       "PackagePath": "staticwebassets\\img\\cryptocurrency.svg"
+    },
+    {
+      "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\heroDishes.png",
+      "PackagePath": "staticwebassets\\img\\heroDishes.png"
     },
     {
       "Id": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\notebook.svg",

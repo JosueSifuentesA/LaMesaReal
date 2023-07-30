@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KonB9/APzIXPV40Nmm6fZ1kOaaDS1GvjgHnDK3NvP1o=",
+  "Hash": "30OB1yn4Q1BFWuzgGVReaBc5fFDOdOjXt0OCTzaqc1g=",
   "Source": "restaurant",
   "BasePath": "_content/restaurant",
   "Mode": "Default",
@@ -1190,6 +1190,40 @@
       "OriginalItemSpec": "wwwroot\\img\\BellIcon.svg"
     },
     {
+      "Identity": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\blob.svg",
+      "SourceId": "restaurant",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\",
+      "BasePath": "_content/restaurant",
+      "RelativePath": "img/blob.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\blob.svg"
+    },
+    {
+      "Identity": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\blobIcon.svg",
+      "SourceId": "restaurant",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\",
+      "BasePath": "_content/restaurant",
+      "RelativePath": "img/blobIcon.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\blobIcon.svg"
+    },
+    {
       "Identity": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\BuyButton.svg",
       "SourceId": "restaurant",
       "SourceType": "Discovered",
@@ -1222,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\CartIcon.svg"
+    },
+    {
+      "Identity": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\CartIconB.svg",
+      "SourceId": "restaurant",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\",
+      "BasePath": "_content/restaurant",
+      "RelativePath": "img/CartIconB.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\CartIconB.svg"
     },
     {
       "Identity": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\categoryIcon.svg",
@@ -1292,6 +1343,23 @@
       "OriginalItemSpec": "wwwroot\\img\\DeliveryIcon.svg"
     },
     {
+      "Identity": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\heroDishes.png",
+      "SourceId": "restaurant",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\",
+      "BasePath": "_content/restaurant",
+      "RelativePath": "img/heroDishes.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\heroDishes.png"
+    },
+    {
       "Identity": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\HeroImgMainPage.jpg",
       "SourceId": "restaurant",
       "SourceType": "Discovered",
@@ -1358,6 +1426,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\OfertasIcon.svg"
+    },
+    {
+      "Identity": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\OfertasIconB.svg",
+      "SourceId": "restaurant",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\",
+      "BasePath": "_content/restaurant",
+      "RelativePath": "img/OfertasIconB.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\OfertasIconB.svg"
     },
     {
       "Identity": "C:\\Users\\josue\\OneDrive\\Escritorio\\Programacion_Invierno\\RestaurantDotnet\\restaurant\\wwwroot\\img\\OrangeCartIcon.svg",

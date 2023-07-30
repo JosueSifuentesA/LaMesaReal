@@ -175,10 +175,14 @@ ul{
     width: 90%;
     margin: 20px auto;
     align-items: center;
+    position: relative;
+    z-index: 2;
+    justify-content: space-around;
 }
 
 .InformationSection_ImageContainer{
     width: 80%;
+    max-width: 650px;
 }
 
 .InformationSection_ImageContainer img{
@@ -215,6 +219,15 @@ ul{
     height: 50%;
 }
 
+.dataModules_informationArea{
+    display: flex;
+    padding: 20px 0px;
+    flex-flow: column;
+    gap: 20px;
+    align-items: flex-start;
+    text-align: none;
+}
+
 .informationModules_module span{
     font-size: 0.8em;
     font-weight: 600;
@@ -232,6 +245,45 @@ ul{
     margin: 20px 0px;
 }
 
+.blobContainer{
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 60%;
+    height: 70%;
+    top: -50px;
+    right: 0px;
+    max-width: 1000px;
+    max-height: 750px;
+}
+
+.blobContainer img{
+    position: absolute;
+    width: 100%;
+    height: 900px;
+    top: -200px;
+    right: -200px;
+    max-width: 900px;
+}
+
+.dataModules_informationArea a{
+    background-color: #FF9C04;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    color: white !important;
+}
+
+.dataModules_informationArea h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.dataModules_informationArea h2{
+    font-size: 20px;
+}
+
+
 @media(max-width: 1000px){
     .ProductSectionHeader{
         display: flex;
@@ -248,12 +300,31 @@ ul{
         flex-flow: column;
         gap: 20px;
         width: 90%;
-        margin: 20px auto;
+        margin: 10px auto 40px;
         align-items: center;
+        padding: 20px 0px;
     }
 
     .InformationSection_ImageContainer{
-        width: 100%;
+        width: 50%;
+        min-width: 300px;
+        position: absolute;
+        filter: blur(4px);
+        opacity: 50%;
+    }
+
+    .InformationSection_dataModules{
+        position: relative;
+        z-index: 1;
+    }
+
+    .dataModules_informationArea{
+        display: flex;
+        padding: 20px 0px;
+        flex-flow: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
     }
 
     .InformationSection_informationModules{
@@ -264,6 +335,21 @@ ul{
         justify-content: none;
         flex-flow: row;
     }   
+
+    .blobContainer{
+        display: none;
+    }
+
+}
+
+@media(max-width: 400px){
+    .dataModules_informationArea h1{
+        font-size: 32px;
+    }
+
+    .dataModules_informationArea h2{
+        font-size: 18px;
+    }
 
 
 }

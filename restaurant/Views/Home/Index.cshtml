@@ -12,31 +12,29 @@
 @section Scripts{
     <script src="~/js/landinPageScript.js"></script>
 }
-
+<div class="blobContainer">
+    <img src="~/img/blobIcon.svg">
+</div>
 <section class="InformationSection">
-    <div class="InformationSection_ImageContainer">
-        <img class="ImageContainer_img" src="~/img/HeroImgMainPage.jpg">
+    <div class="InformationSection_dataModules">
+        <div class="dataModules_informationArea">
+            
+            <h1>La comida de los reyes a un solo click de distancia</h1>
+            <h2>Descubre el sabor regio y autentico de nuestra cocina. ¡Bienvenido a La Mesa Real!</h2>
+            <a>Empezar ya</a>      
+        </div>
     </div>
-    <div class="InformationSection_informationModules">
-        <div class="informationModules_module">
-            <img src="~/img/BellIcon.svg">
-            <span>SERVICIO RAPIDO</span>
-        </div>
-        <div class="informationModules_module">
-            <img src="~/img/DeliveryIcon.svg">
-            <span>30 MINUTOS O ES GRATIS</span>
-        </div>
-        <div class="informationModules_module">
-            <img src="~/img/RecipeIcon.svg">
-            <span>RECETAS ORIGINALES</span>
-        </div>
+    <div class="InformationSection_ImageContainer">
+        <img class="ImageContainer_img" src="~/img/heroDishes.png">
     </div>
 </section>
 
 
 <section class="ProductSection">
-    <h2 class="ProductSection_h2">CONTAMOS CON MÁS DE @lenght PLATILLOS </h2>
-    <form class="ProductSectionHeader" method="post" asp-action="Index" asp-controller="Home">
+    @if(lenght > 0){
+        <h2 class="ProductSection_h2">CONTAMOS CON MÁS DE @lenght PLATILLOS </h2>
+    }
+    <form class="ProductSectionHeader" method="post" asp-action="IndexUsuario" asp-controller="Usuario">
         <div class="CategoryHandler">
             <div id='category_0'  class="CategoryHandler_categoryItem">
                 <label>ALL</label> 
